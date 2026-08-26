@@ -63,6 +63,23 @@
   </div>
 </section>
 
+<!-- FOUNDER -->
+<section class="section">
+  <div class="container container-md">
+    <div class="founder">
+      <div class="founder-label">
+        <span class="eyebrow muted">{$t('about.founderEyebrow')}</span>
+        <h3>{$t('about.founder.name')}</h3>
+        <span class="role">{$t('about.founder.role')}</span>
+      </div>
+      <div class="founder-body">
+        <p>{$t('about.founder.bio')}</p>
+        <p class="founder-line">{$t('about.founder.line')}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CLOSE / CONTACT ANCHOR -->
 <section id="contact" class="section">
   <div class="container container-md">
@@ -154,6 +171,33 @@
   }
   .value p { color: var(--text-muted); }
 
+  .founder {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+  }
+  .founder-label h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: var(--fw-normal);
+    margin-top: 0.4rem;
+  }
+  .founder-label .role {
+    font-size: var(--fs-small);
+    color: var(--text-muted);
+  }
+  .founder-body p {
+    color: var(--text-medium);
+    line-height: 1.7;
+    max-width: 40rem;
+  }
+  .founder-line {
+    margin-top: 1rem;
+    color: var(--text-muted) !important;
+  }
+
   .close-block {
     background: var(--bg-invert);
     color: var(--text-invert);
@@ -178,6 +222,7 @@
   }
 
   @media (max-width: 991px) {
+    .founder { grid-template-columns: 1fr; gap: 1.25rem; }
     .offerings-grid { grid-template-columns: 1fr 1fr; }
     .methodology { grid-template-columns: 1fr; gap: 1.5rem; }
   }

@@ -8,7 +8,7 @@
   <div class="container container-lg footer-inner">
     <div class="brand">
       <div class="logo">
-        <span class="logo-mark" aria-hidden="true">◐</span>
+        <img class="logo-mark" src="/black-logo-lettering.png"  alt="synia logo"/>
         <span>{$t('brand.name')}</span>
       </div>
       <p class="tagline">{$t('footer.tagline')}</p>
@@ -20,6 +20,7 @@
         <ul>
           <li><a href="/">{$t('nav.home')}</a></li>
           <li><a href="/about">{$t('nav.about')}</a></li>
+          <li><a href="/writing">{$t('nav.writing')}</a></li>
         </ul>
       </div>
       <div>
@@ -52,7 +53,7 @@
   }
   .brand .logo {
     display: inline-flex;
-    align-items: baseline;
+    align-items:center;
     gap: 0.5rem;
     font-family: var(--font-heading);
     font-size: 1.5rem;
@@ -65,7 +66,11 @@
     color: var(--text-muted);
     font-size: var(--fs-small);
   }
-
+  
+  .logo-mark {
+    height: 40px;
+    width: 40px;
+  }
   .links-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;

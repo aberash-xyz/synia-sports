@@ -24,13 +24,12 @@ if (browser) {
 
 /** Reactive translator: usage in markup as `$t('home.title')` */
 export const t = derived(locale, ($locale) => {
-  return (key) => lookup(dicts[$locale] || dicts.en, key) ?? key;
+  return (key) => resolve($locale, key);
 });
 
 /** Imperative helper for non-reactive contexts. */
 export function tNow(key) {
-  const $locale = get(locale);
-  return lookup(dicts[$locale] || dicts.en, key) ?? key;
+  return resolve(get(locale), key);
 }
 
 export function setLocale(next) {
@@ -40,6 +39,17 @@ export function setLocale(next) {
 
 export function toggleLocale() {
   locale.update((v) => (v === 'en' ? 'am' : 'en'));
+}
+
+/**
+ * Resolve a key in the active locale, falling back to English.
+ * Long-form pages are authored in English only; without this fallback a
+ * missing key renders as the raw key string.
+ */
+function resolve($locale, key) {
+  const value = lookup(dicts[$locale] || dicts.en, key);
+  if (value != null) return value;
+  return lookup(dicts.en, key) ?? key;
 }
 
 function lookup(dict, key) {

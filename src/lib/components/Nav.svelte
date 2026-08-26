@@ -1,7 +1,8 @@
 <script>
   import { page } from '$app/stores';
   import { t } from '$lib/i18n.js';
-  import LangToggle from './LangToggle.svelte';
+  // LangToggle hidden until Amharic copy is retranslated and reviewed — restore with the markup below
+  // import LangToggle from './LangToggle.svelte';
 
   $: pathname = $page.url.pathname;
   $: isActive = (href) => (href === '/' ? pathname === '/' : pathname.startsWith(href));
@@ -10,17 +11,18 @@
 <header class="nav">
   <div class="container container-lg nav-inner">
     <a class="logo" href="/">
-      <span class="logo-mark" aria-hidden="true">◐</span>
+      <span class="logo-mark" aria-hidden="true"><img src="/black-logo-lettering.png" alt="synia letter logo small"/></span>
       <span class="logo-text">{$t('brand.name')}</span>
     </a>
 
     <nav class="links" aria-label="Primary">
       <a href="/" class:active={isActive('/')}>{$t('nav.home')}</a>
       <a href="/about" class:active={isActive('/about')}>{$t('nav.about')}</a>
+      <a href="/writing" class:active={isActive('/writing')}>{$t('nav.writing')}</a>
     </nav>
 
     <div class="actions">
-      <LangToggle />
+      <!-- <LangToggle /> -->
       <a class="nav-cta" href="/about#contact">{$t('nav.cta')}</a>
     </div>
   </div>
@@ -44,8 +46,8 @@
   }
   .logo {
     display: inline-flex;
-    align-items: baseline;
-    gap: 0.5rem;
+    align-items: center;
+    gap: 0.25rem;
     font-family: var(--font-heading);
     font-size: 1.4rem;
     font-weight: var(--fw-semibold);
@@ -56,6 +58,12 @@
     color: var(--accent);
     font-size: 1.4rem;
     transform: translateY(2px);
+    max-height: 50px;
+  }
+  .logo-mark>img {
+    height: 50px;
+    width: 50px;
+
   }
   .links {
     display: flex;
