@@ -7,6 +7,14 @@
    */
   const pieces = [
     {
+      href: '/writing/what-actually-fills-a-stadium',
+      kind: 'Research',
+      title: 'What actually fills a stadium',
+      summary:
+        'Research on African football attendance says facility experience, social belonging and organisational trust drive attendance \u2014 not competitive uncertainty. What that means for Ethiopian football, and two conclusions of my own it overturns.',
+      date: '2026'
+    },
+    {
       href: '/writing/sports-asset-activation-framework',
       kind: 'Framework',
       title: 'The Sports Asset Activation Framework',

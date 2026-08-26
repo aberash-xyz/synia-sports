@@ -97,11 +97,10 @@ export default {
     ],
     founderEyebrow: 'Who runs it',
     founder: {
-      // TODO: confirm the full name exactly as you want it displayed.
-      name: 'Nathan',
+      name: 'Nathan Shanko',
       role: 'Founder',
-      bio: 'Synia is run by its founder. He played college soccer, and has spent roughly eight years coaching and eight years building software \u2014 holding US Soccer coaching licences alongside a background in mathematics and computer science. A master\u2019s in sports administration followed, at Northwestern, focused on sports analytics.',
-      line: 'His schooling moved between countries, and the years between degrees went much the same way. The practice sits where those things meet: the sport itself, the software that measures it, and a working habit of not assuming one market behaves like another.'
+      bio: 'Synia is run by its founder, a former college soccer player who studied mathematics and computer science before completing a master\u2019s in sports administration, with a focus on sports analytics, at Northwestern. Eight years of work in software development and soccer coaching came in between, across several countries.',
+      line: 'The practice sits where those three things meet: sport, measurement, and the economics of development.'
     },
     closeTitle: 'Ready to talk?',
     closeBody: 'We take a small number of engagements at a time. If your work touches the commercial or economic side of sport — a property, a city, a sponsorship, or a market you are trying to see clearly — we would like to hear about it.',
