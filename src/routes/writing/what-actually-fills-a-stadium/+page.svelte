@@ -226,10 +226,10 @@
       <p>
         That design was reasoning correctly from a premise I now think is wrong. Edge hardware
         and physical cards are what you build when you have concluded your audience cannot be
-        reached any other way. Correct the denominator and the recommendation falls with it.
+        reached any other way. With a corrected denominator that recommendation falls away.
       </p>
       <p>
-        If the matchgoing audience carries phones — and it does — then admission keyed to a phone
+        If the matchgoing audience carries phones then admission keyed to a phone
         number does the same job with no capital expenditure, no hardware to maintain, no cards
         to replace, and no installation to negotiate with a stadium operator. Ticket purchase or
         collection can run the same way. The direction of travel is not ambiguous: people acquire
@@ -252,7 +252,7 @@
       <p>
         The phone-based approach is also <em>better</em>, not merely cheaper, for the thing that
         actually matters. A card tapped at a turnstile produces an anonymous count. A phone
-        number produces a returning identity — which is what the useful metric requires. The
+        number produces a returning identity, which is what the useful metric requires. The
         original research proposed measuring first-match-to-return rate, targeting 35 percent
         within a season. You cannot measure return without recognising a person across two
         Saturdays, and a phone number does that natively. It also leaves you with something a
