@@ -74,6 +74,9 @@
 
   --primary: #111112;
   --accent: #ebad7d;
+  --accent-soft: #fdf4ec;   /* tinted surfaces — Activate quadrant, active states */
+  --accent-deep: #8a4f1e;   /* accent as readable text on light backgrounds */
+  --accent-ring: rgba(235, 173, 125, 0.35);
   --grey-section: #f1f1f1;
   --grey-text: #606060;
   --text-medium: #313131;
@@ -158,6 +161,16 @@ html[lang="am"] h3 {
   text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: var(--sp-sm);
+}
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 1.75rem;
+  height: 2px;
+  margin-right: 0.6rem;
+  vertical-align: middle;
+  transform: translateY(-1px);
+  background: var(--accent);
 }
 
 .muted { color: var(--text-muted); }

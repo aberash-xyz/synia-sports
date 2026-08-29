@@ -169,6 +169,16 @@
         lets a team honour the ambition without pretending it is actionable. The alternative is
         that it quietly consumes attention every quarter and produces nothing.
       </p>
+
+      <a class="tool-cta" href="/tools/asset-scorecard">
+        <span class="tool-cta-eyebrow">Working tool</span>
+        <span class="tool-cta-title">Score and plot your own assets</span>
+        <span class="tool-cta-note">
+          The four axes plus sellability, plotted live into this matrix. Free, runs in your
+          browser, exports a chart.
+        </span>
+        <span class="tool-cta-arrow" aria-hidden="true">→</span>
+      </a>
     </div>
   </section>
 
@@ -576,6 +586,53 @@
     font-size: 1.2rem;
   }
   .verdict strong { color: var(--accent); }
+
+  /* Tool CTA */
+  .tool-cta {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: 1.5rem;
+    margin-block: 2.5rem;
+    padding: 1.75rem 2rem;
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .tool-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px -18px var(--scrim-20);
+  }
+  .tool-cta-eyebrow {
+    grid-column: 1;
+    font-size: var(--fs-tiny);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-deep);
+  }
+  .tool-cta-title {
+    grid-column: 1;
+    margin-top: 0.3rem;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+  .tool-cta-note {
+    grid-column: 1;
+    margin-top: 0.4rem;
+    font-size: var(--fs-small);
+    line-height: 1.6;
+    color: var(--text-medium);
+  }
+  .tool-cta-arrow {
+    grid-column: 2;
+    grid-row: 1 / -1;
+    font-size: 1.5rem;
+    color: var(--accent-deep);
+    transition: transform 0.3s ease;
+  }
+  .tool-cta:hover .tool-cta-arrow { transform: translateX(4px); }
 
   .build {
     margin-block: 1.5rem;

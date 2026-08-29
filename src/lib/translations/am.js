@@ -14,6 +14,7 @@ export default {
     home: 'መነሻ',
     about: 'ስለ እኛ',
     writing: 'ጽሑፎች',
+    tools: 'መሣሪያዎች',
     contact: 'አግኙን',
     cta: 'ያግኙን'
   },

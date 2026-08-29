@@ -21,6 +21,7 @@
           <li><a href="/">{$t('nav.home')}</a></li>
           <li><a href="/about">{$t('nav.about')}</a></li>
           <li><a href="/writing">{$t('nav.writing')}</a></li>
+          <li><a href="/tools">{$t('nav.tools')}</a></li>
         </ul>
       </div>
       <div>

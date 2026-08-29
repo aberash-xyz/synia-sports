@@ -7,6 +7,7 @@ export default {
     home: 'Home',
     about: 'About',
     writing: 'Writing',
+    tools: 'Tools',
     contact: 'Contact',
     cta: 'Get in touch'
   },

@@ -19,6 +19,7 @@
       <a href="/" class:active={isActive('/')}>{$t('nav.home')}</a>
       <a href="/about" class:active={isActive('/about')}>{$t('nav.about')}</a>
       <a href="/writing" class:active={isActive('/writing')}>{$t('nav.writing')}</a>
+      <a href="/tools" class:active={isActive('/tools')}>{$t('nav.tools')}</a>
     </nav>
 
     <div class="actions">
@@ -72,12 +73,22 @@
     font-weight: var(--fw-medium);
   }
   .links a {
+    position: relative;
     color: var(--text-muted);
     transition: color 0.3s ease;
   }
   .links a:hover,
   .links a.active {
     color: var(--text);
+  }
+  .links a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.4rem;
+    height: 2px;
+    background: var(--accent);
   }
   .actions {
     display: flex;
