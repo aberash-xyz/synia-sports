@@ -106,6 +106,13 @@ export default {
     closeBody: 'We take a small number of engagements at a time. If your work touches the commercial or economic side of sport — a property, a city, a sponsorship, or a market you are trying to see clearly — we would like to hear about it.',
     closeCta: 'Get in touch'
   },
+  notFound: {
+    eyebrow: 'Error 404',
+    title: 'This page does not exist.',
+    lede: 'The link may be out of date, or the address may have been mistyped. The pages below are all still here.',
+    home: 'Back to home',
+    writing: 'Read the writing'
+  },
   footer: {
     tagline: 'Measurement for the sports economy. Ethiopia first.',
     rights: 'All rights reserved.',
