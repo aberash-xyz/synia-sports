@@ -77,7 +77,7 @@
       name: 'Altitude running',
       moat: 92,
       ceiling: 0,
-      gap: 84,
+      gap: 58,
       clock: 14,
       sell: 1,
       reachNote: 'Elite squads fly in from Europe and the Gulf for a full camp.'
@@ -88,8 +88,8 @@
       ceiling: 3,
       gap: 74,
       clock: 82,
-      sell: 0,
-      reachNote: 'Away support arrives from across the region on matchweek.'
+      sell: 2,
+      reachNote: 'Diaspora attendance. Away support arrives from across the region on matchweek.'
     },
     {
       name: 'Domestic league',

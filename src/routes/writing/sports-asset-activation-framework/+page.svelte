@@ -12,25 +12,25 @@
     {
       key: 'activate',
       label: 'Activate',
-      condition: 'Large gap · Short clock',
+      condition: 'Wide gap · Short clock',
       job: 'This is the 90-day list. Underpriced and ready now. The work is commercial, not strategic — pick the metric, name the owner, start collecting.'
     },
     {
       key: 'build',
       label: 'Build toward',
-      condition: 'Large gap · Long clock',
+      condition: 'Wide gap · Long clock',
       job: 'The job today is not revenue, it is pre-positioning. Decide now what data, what technical specification, and what event calendar the asset will need — those get roughly ten times cheaper to embed before construction finishes than after.'
     },
     {
       key: 'maintain',
       label: 'Maintain',
-      condition: 'Small gap · Short clock',
+      condition: 'Narrow gap · Short clock',
       job: 'Already working. Protect it, do not over-invest attention in it. The temptation is to keep optimising the asset you already understand.'
     },
     {
       key: 'park',
       label: 'Park',
-      condition: 'Small gap · Long clock',
+      condition: 'Narrow gap · Long clock',
       job: 'Not abandoned — scheduled. Naming the binding constraint is the output here. If the constraint is roads rather than strategy, say so and set a date to revisit.'
     }
   ];
@@ -154,6 +154,10 @@
         part that matters — four genuinely different jobs. An asset's quadrant does not tell you
         how important it is. It tells you what kind of work it needs this year.
       </p>
+      <p>
+        Wide and narrow split at the midpoint of the gap scale, which sits below the Large band
+        — an asset can score Medium on the axis and still belong in the upper half.
+      </p>
 
       <div class="matrix" role="img" aria-label="Two-by-two matrix plotting value gap against time to activate">
         <span class="axis-label y">Value gap →</span>
@@ -251,7 +255,7 @@
       <div class="scorecard">
         <div><span>Moat</span><strong>Strong</strong><em>Altitude and terrain are not replicable</em></div>
         <div><span>Ceiling</span><strong>Niche</strong><em>A few thousand athletes a year, however far they travel</em></div>
-        <div><span>Gap</span><strong>Large</strong><em>Little of the demand is captured commercially</em></div>
+        <div><span>Gap</span><strong>Medium</strong><em>Camp operators capture part of it; most of the ceiling is not</em></div>
         <div><span>Clock</span><strong>0–12 months</strong><em>The product already exists informally</em></div>
       </div>
 
@@ -287,7 +291,7 @@
         <h3>Now score the stadium</h3>
         <p>
           Run the same four axes on a stadium under construction and it lands somewhere else
-          entirely: large gap, long clock — <strong>Build toward</strong>. Same portfolio, same
+          entirely: wide gap, long clock — <strong>Build toward</strong>. Same portfolio, same
           scoring, completely different job this year. The stadium's near-term work is not
           revenue. It is deciding, now, what data capture, what technical specification and
           what event calendar the building needs — because embedding those before completion
