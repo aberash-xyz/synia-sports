@@ -2,9 +2,9 @@
   import { onMount } from 'svelte';
   import { Slider, ToggleGroup } from 'bits-ui';
 
-  const STORAGE_KEY = 'synia.scorecard.v1';
+  const STORAGE_KEY = 'synia.scorecard.v2';
 
-  const REACH = ['Within city', 'Intercity', 'Regional Africa', 'Global'];
+  const CEILING = ['Niche', 'Small', 'Mid', 'Large'];
   const SELL = ['None', 'Partial', 'Defined'];
 
   /** @param {number} v @param {string} a @param {string} b @param {string} c */
@@ -51,7 +51,7 @@
   }
 
   /** @param {number} i */
-  const reachRadius = (i) => [6, 8, 10.5, 13][i];
+  const ceilingRadius = (i) => [6, 8, 10.5, 13][i];
 
   // ---- plot geometry ----
   const VB_W = 660;
@@ -68,14 +68,38 @@
   const SERIF = '"Crimson Pro", Georgia, serif';
 
   /**
-   * @typedef {{ id: string, name: string, moat: number, reach: number,
-   *             gap: number, clock: number, sell: number }} Asset
+   * @typedef {{ id: string, name: string, moat: number, ceiling: number,
+   *             gap: number, clock: number, sell: number, reachNote: string }} Asset
    */
 
   const WORKED_EXAMPLE = [
-    { name: 'Altitude running', moat: 92, reach: 3, gap: 84, clock: 14, sell: 1 },
-    { name: 'Stadium + continental fixtures', moat: 48, reach: 2, gap: 74, clock: 82, sell: 0 },
-    { name: 'Domestic league', moat: 55, reach: 0, gap: 28, clock: 22, sell: 2 }
+    {
+      name: 'Altitude running',
+      moat: 92,
+      ceiling: 3,
+      gap: 84,
+      clock: 14,
+      sell: 1,
+      reachNote: 'Elite squads fly in from Europe and the Gulf for a full camp.'
+    },
+    {
+      name: 'Stadium + continental fixtures',
+      moat: 48,
+      ceiling: 2,
+      gap: 74,
+      clock: 82,
+      sell: 0,
+      reachNote: 'Away support arrives from across the region on matchweek.'
+    },
+    {
+      name: 'Domestic league',
+      moat: 55,
+      ceiling: 0,
+      gap: 28,
+      clock: 22,
+      sell: 2,
+      reachNote: 'Crowd is drawn from the city and its immediate suburbs.'
+    }
   ];
 
   // ---- state ----
@@ -87,7 +111,8 @@
   let moat = $state(50);
   let gap = $state(50);
   let clock = $state(50);
-  let reach = $state('1');
+  let ceiling = $state('1');
+  let reachNote = $state('');
   let sell = $state('1');
   let hydrated = $state(false);
   /** @type {SVGSVGElement | null} */
@@ -126,7 +151,7 @@
       a &&
       typeof a.id === 'string' &&
       typeof a.name === 'string' &&
-      ['moat', 'gap', 'clock', 'reach', 'sell'].every((k) => typeof a[k] === 'number')
+      ['moat', 'gap', 'clock', 'ceiling', 'sell'].every((k) => typeof a[k] === 'number')
     );
   }
 
@@ -142,7 +167,8 @@
     moat = 50;
     gap = 50;
     clock = 50;
-    reach = '1';
+    ceiling = '1';
+    reachNote = '';
     sell = '1';
   }
 
@@ -152,7 +178,8 @@
       moat,
       gap,
       clock,
-      reach: Number(reach),
+      ceiling: Number(ceiling),
+      reachNote: reachNote.trim(),
       sell: Number(sell)
     };
     if (editingId) {
@@ -172,7 +199,8 @@
     moat = a.moat;
     gap = a.gap;
     clock = a.clock;
-    reach = String(a.reach);
+    ceiling = String(a.ceiling);
+    reachNote = a.reachNote ?? '';
     sell = String(a.sell);
     nameEl?.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
@@ -259,20 +287,31 @@
       </div>
 
       <div class="field">
-        <span class="group-label" id="reach-label">Reach</span>
+        <span class="group-label" id="ceiling-label">Ceiling</span>
         <ToggleGroup.Root
           type="single"
-          bind:value={reach}
+          bind:value={ceiling}
           class="sc-toggle sc-toggle--4"
-          aria-labelledby="reach-label"
+          aria-labelledby="ceiling-label"
         >
-          {#each REACH as label, i}
+          {#each CEILING as label, i}
             <ToggleGroup.Item value={String(i)} class="sc-toggle__item" aria-label={label}>
-              {['City', 'Intercity', 'Africa', 'Global'][i]}
+              {label}
             </ToggleGroup.Item>
           {/each}
         </ToggleGroup.Root>
-        <p class="hint">How far will someone travel for it?</p>
+        <p class="hint">How big can this get at full realisation?</p>
+      </div>
+
+      <div class="field">
+        <label for="reach-note">Reach (note)</label>
+        <input
+          id="reach-note"
+          class="text-input"
+          bind:value={reachNote}
+          placeholder="Who travels for this, and how far?"
+          autocomplete="off"
+        />
       </div>
 
       <div class="field">
@@ -414,7 +453,7 @@
           <circle
             cx={px(clock)}
             cy={py(gap)}
-            r={reachRadius(Number(reach)) + 5}
+            r={ceilingRadius(Number(ceiling)) + 5}
             fill="none"
             stroke="#111112"
             stroke-width="1.5"
@@ -427,7 +466,7 @@
               <circle
                 cx={px(a.clock)}
                 cy={py(a.gap)}
-                r={reachRadius(a.reach) + 5}
+                r={ceilingRadius(a.ceiling) + 5}
                 fill="none"
                 stroke="#111112"
                 stroke-width="1.3"
@@ -437,14 +476,14 @@
             <circle
               cx={px(a.clock)}
               cy={py(a.gap)}
-              r={reachRadius(a.reach)}
+              r={ceilingRadius(a.ceiling)}
               fill={moatFill(a.moat)}
               stroke="#ffffff"
               stroke-width="1.5"
             />
             <text
               x={px(a.clock)}
-              y={py(a.gap) - reachRadius(a.reach) - 11}
+              y={py(a.gap) - ceilingRadius(a.ceiling) - 11}
               text-anchor="middle"
               font-family={SANS}
               font-size="12"
@@ -470,7 +509,7 @@
             <circle cx="17" cy="7" r="4" fill="#8d8781" />
             <circle cx="29" cy="7" r="5.5" fill="#8d8781" />
           </svg>
-          Size — reach
+          Size — ceiling
         </span>
         <span class="key">
           <svg width="34" height="14" aria-hidden="true">
@@ -509,9 +548,12 @@
             <span class="swatch" style="background: {moatFill(a.moat)}"></span>
             <span class="asset-name">{a.name}</span>
             <span class="asset-meta">
-              {moatBand(a.moat)} moat · {REACH[a.reach]} · {gapBand(a.gap)} gap · {clockBand(a.clock)}
-              · {SELL[a.sell]} sellability
+              {moatBand(a.moat)} moat · {CEILING[a.ceiling]} ceiling · {gapBand(a.gap)} gap ·
+              {clockBand(a.clock)} · {SELL[a.sell]} sellability
             </span>
+            {#if a.reachNote}
+              <span class="asset-note">Reach — {a.reachNote}</span>
+            {/if}
             <span class="badge" class:badge-accent={quadrant(a.gap, a.clock) === 'Activate'}>
               {quadrant(a.gap, a.clock)}
             </span>
@@ -750,6 +792,12 @@
     flex: 1 1 16rem;
     font-size: var(--fs-tiny);
     color: var(--text-muted);
+  }
+  .asset-note {
+    flex: 1 1 100%;
+    font-size: var(--fs-tiny);
+    font-style: italic;
+    color: var(--neutral-300);
   }
   .badge {
     padding: 0.28rem 0.7rem;
