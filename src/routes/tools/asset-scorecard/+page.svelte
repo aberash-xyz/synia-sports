@@ -4,7 +4,7 @@
 
   const legend = [
     { axis: 'Moat', encoded: 'Fill', note: 'Warm neutral → accent → deep. Darker means harder to copy.' },
-    { axis: 'Reach', encoded: 'Size', note: 'City, intercity, regional Africa, global.' },
+    { axis: 'Ceiling', encoded: 'Size', note: 'Niche, small, mid, large — how big it gets at full realisation.' },
     { axis: 'Gap', encoded: 'Vertical position', note: 'Potential value minus value realised today.' },
     { axis: 'Clock', encoded: 'Horizontal position', note: 'How long until it can be activated.' },
     { axis: 'Sellability', encoded: 'Ring', note: 'No ring, dashed, solid — nothing for sale through to a defined, priced offer.' }
@@ -15,7 +15,7 @@
   <title>Asset scorecard &amp; portfolio plot — {$t('brand.name')}</title>
   <meta
     name="description"
-    content="An interactive tool for scoring sports assets on moat, reach, gap, clock and sellability, and plotting them into the activate / build / maintain / park matrix."
+    content="An interactive tool for scoring sports assets on moat, ceiling, gap, clock and sellability, and plotting them into the activate / build / maintain / park matrix."
   />
 </svelte:head>
 
@@ -45,7 +45,7 @@
         <h2>Reading the plot</h2>
         <p class="note">
           Gap and clock decide the quadrant, so they decide what kind of work the asset needs this
-          year. Moat and reach decide the order inside a quadrant — when four things land in
+          year. Moat and ceiling decide the order inside a quadrant — when four things land in
           <strong>Activate</strong>, the strongest moat goes first. Sellability is the commercial
           test: if you cannot say what is for sale and what evidence prices it, the asset is not
           ready to take to a sponsor regardless of where it plotted.

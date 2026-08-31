@@ -66,7 +66,7 @@ export default {
     offerings: [
       {
         title: 'Sports Asset Scoring',
-        body: 'A structured way to evaluate a portfolio of sports assets — on defensibility, reach, the gap between potential and realised value, and time to activate. The output is a scorecard a city or federation keeps and re-runs, not a report that sits on a shelf.'
+        body: 'A structured way to evaluate a portfolio of sports assets — on defensibility, ceiling, the gap between potential and realised value, and time to activate. The output is a scorecard a city or federation keeps and re-runs, not a report that sits on a shelf.'
       },
       {
         title: 'Measurement and Baseline Studies',

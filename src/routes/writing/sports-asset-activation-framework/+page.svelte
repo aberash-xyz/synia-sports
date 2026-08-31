@@ -3,7 +3,7 @@
 
   const axes = [
     { name: 'Moat',  question: 'Why here and nowhere else?',            scale: 'None / Weak / Strong' },
-    { name: 'Reach', question: 'How far will someone travel for it?',   scale: 'Within city → Intercity → Regional Africa → Global' },
+    { name: 'Ceiling', question: 'How big can this get at full realisation?', scale: 'Niche / Small / Mid / Large' },
     { name: 'Gap',   question: 'Potential value minus value realised today?', scale: 'Small / Medium / Large' },
     { name: 'Clock', question: 'How long until it can be activated?',   scale: '0–12mo / 1–3yr / 3yr+' }
   ];
@@ -124,15 +124,21 @@
         </table>
       </div>
 
+      <p>
+        Reach — who travels for the asset, and how far — is worth writing down beside each score,
+        but do not score it. It is evidence for the ceiling rather than a fourth judgement, and
+        turning it into a band invites an argument about geography when the question is size.
+      </p>
+
       <div class="callout">
         <h3>Why four axes when you only plot two?</h3>
         <p>
-          <strong>Gap and Clock tell you what to do. Moat and Reach tell you what to do first.</strong>
+          <strong>Gap and Clock tell you what to do. Moat and Ceiling tell you what to do first.</strong>
           When several assets land in the same quadrant — and they will — you sequence them by
-          moat, then by reach. A strong moat means nobody can copy the position out from under
-          you; global reach means the ceiling is high enough to justify the effort. Two assets
-          can be equally ready and equally underpriced, and still deserve very different
-          amounts of attention.
+          moat, then by ceiling. A strong moat means nobody can copy the position out from under
+          you; a large ceiling means the upside is worth the effort. Two assets can be equally
+          ready and equally underpriced, and still deserve very different amounts of
+          attention.
         </p>
       </div>
     </div>
@@ -244,7 +250,7 @@
 
       <div class="scorecard">
         <div><span>Moat</span><strong>Strong</strong><em>Altitude and terrain are not replicable</em></div>
-        <div><span>Reach</span><strong>Global</strong><em>Athletes travel continents for it</em></div>
+        <div><span>Ceiling</span><strong>Large</strong><em>The addressable market is the global endurance circuit</em></div>
         <div><span>Gap</span><strong>Large</strong><em>Little of the demand is captured commercially</em></div>
         <div><span>Clock</span><strong>0–12 months</strong><em>The product already exists informally</em></div>
       </div>

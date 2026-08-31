@@ -11,7 +11,7 @@
       kind: 'Scorecard',
       title: 'Asset scorecard & portfolio plot',
       summary:
-        'Score sports assets on moat, reach, gap, clock and sellability, and plot them into the activate / build / maintain / park matrix. Runs in your browser, exports a chart.',
+        'Score sports assets on moat, ceiling, gap, clock and sellability, and plot them into the activate / build / maintain / park matrix. Runs in your browser, exports a chart.',
       pairsWith: {
         label: 'The Sports Asset Activation Framework',
         href: '/writing/sports-asset-activation-framework'
