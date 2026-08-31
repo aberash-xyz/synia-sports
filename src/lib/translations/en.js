@@ -9,7 +9,8 @@ export default {
     writing: 'Writing',
     tools: 'Tools',
     contact: 'Contact',
-    cta: 'Get in touch'
+    cta: 'Get in touch',
+    menu: 'Menu'
   },
   lang: {
     toggle: 'አማ',

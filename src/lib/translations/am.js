@@ -16,7 +16,8 @@ export default {
     writing: 'ጽሑፎች',
     tools: 'መሣሪያዎች',
     contact: 'አግኙን',
-    cta: 'ያግኙን'
+    cta: 'ያግኙን',
+    menu: 'ዝርዝር'
   },
   lang: {
     toggle: 'EN',
