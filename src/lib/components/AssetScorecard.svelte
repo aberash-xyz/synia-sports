@@ -76,7 +76,7 @@
     {
       name: 'Altitude running',
       moat: 92,
-      ceiling: 3,
+      ceiling: 0,
       gap: 84,
       clock: 14,
       sell: 1,
@@ -85,7 +85,7 @@
     {
       name: 'Stadium + continental fixtures',
       moat: 48,
-      ceiling: 2,
+      ceiling: 3,
       gap: 74,
       clock: 82,
       sell: 0,
@@ -300,7 +300,7 @@
             </ToggleGroup.Item>
           {/each}
         </ToggleGroup.Root>
-        <p class="hint">How big can this get at full realisation?</p>
+        <p class="hint">How big is the visitor economy at full realisation?</p>
       </div>
 
       <div class="field">

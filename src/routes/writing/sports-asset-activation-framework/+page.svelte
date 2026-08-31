@@ -3,7 +3,7 @@
 
   const axes = [
     { name: 'Moat',  question: 'Why here and nowhere else?',            scale: 'None / Weak / Strong' },
-    { name: 'Ceiling', question: 'How big can this get at full realisation?', scale: 'Niche / Small / Mid / Large' },
+    { name: 'Ceiling', question: 'How big is the visitor economy at full realisation?', scale: 'Niche / Small / Mid / Large' },
     { name: 'Gap',   question: 'Potential value minus value realised today?', scale: 'Small / Medium / Large' },
     { name: 'Clock', question: 'How long until it can be activated?',   scale: '0–12mo / 1–3yr / 3yr+' }
   ];
@@ -250,13 +250,19 @@
 
       <div class="scorecard">
         <div><span>Moat</span><strong>Strong</strong><em>Altitude and terrain are not replicable</em></div>
-        <div><span>Ceiling</span><strong>Large</strong><em>The addressable market is the global endurance circuit</em></div>
+        <div><span>Ceiling</span><strong>Niche</strong><em>A few thousand athletes a year, however far they travel</em></div>
         <div><span>Gap</span><strong>Large</strong><em>Little of the demand is captured commercially</em></div>
         <div><span>Clock</span><strong>0–12 months</strong><em>The product already exists informally</em></div>
       </div>
 
       <p class="verdict">Plots into <strong>Activate</strong>.</p>
 
+      <p>
+        <strong>A strong moat and a niche ceiling is not a contradiction.</strong> The global
+        pull is real — athletes fly in from three continents — but the number of people who will
+        ever do this is a few thousand a year, and today they are long-stay and low-spend. That
+        is the ceiling. It is also why the multipliers matter more here than volume does.
+      </p>
       <p>
         <strong>The metric:</strong> international camp bed-nights per quarter.
         <strong>The collection method:</strong> three or four camp operators already exist and

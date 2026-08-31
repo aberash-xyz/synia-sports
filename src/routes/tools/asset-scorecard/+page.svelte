@@ -4,7 +4,7 @@
 
   const legend = [
     { axis: 'Moat', encoded: 'Fill', note: 'Warm neutral → accent → deep. Darker means harder to copy.' },
-    { axis: 'Ceiling', encoded: 'Size', note: 'Niche, small, mid, large — how big it gets at full realisation.' },
+    { axis: 'Ceiling', encoded: 'Size', note: 'Niche, small, mid, large — how big the visitor economy gets at full realisation.' },
     { axis: 'Gap', encoded: 'Vertical position', note: 'Potential value minus value realised today.' },
     { axis: 'Clock', encoded: 'Horizontal position', note: 'How long until it can be activated.' },
     { axis: 'Sellability', encoded: 'Ring', note: 'No ring, dashed, solid — nothing for sale through to a defined, priced offer.' }
