@@ -17,41 +17,42 @@ export default {
     aria: 'Switch language'
   },
   home: {
-    eyebrow: 'Sports economy measurement — Ethiopia first',
-    title: 'Sport creates value here. Almost none of it is measured.',
-    lede: 'Synia builds the measurement layer for sport in markets that do not have one yet — so clubs, cities, and the brands around them can see what they actually hold.',
-    ctaPrimary: 'How we work',
+    eyebrow: 'Sports travel and sports economy — Ethiopia',
+    title: 'Ethiopia has a sporting year worth travelling for.',
+    lede: 'Synia builds trips around Ethiopia’s races, matches and training grounds, and the cultural calendar that runs alongside them. For the diaspora coming home, for runners who want the altitude, for anyone who wants to see the country through its sport. And because we bring the visitors, we can count what they bring.',
+    ctaPrimary: 'What we do',
     ctaSecondary: 'Get in touch',
-    proofTitle: 'The gap is not digital. It is instrumentation.',
-    proofBody: 'Sport in Ethiopia gets described as a low-data market. That is an outsider reading. The signals exist — gate counts, camp bookings, participation, spend, travel — they are simply not collected in any structured form, and no one has been asked to collect them. We start from what a market already knows about itself and build the collection method around that, rather than importing a measurement model designed for somewhere else.',
-    segmentsTitle: 'What we measure',
+    proofTitle: 'Sport moves people. Moving people is an economy.',
+    proofBody: 'Every November, tens of thousands run through Addis in the Great Ethiopian Run. Every January, Timkat fills Gondar. Every weekend there is a match somewhere, and every morning there is a training group on the hills above Sululta. Almost none of it is dated, packaged or sold to anyone outside the country. So the money visitors would spend never arrives, and the numbers that would justify investing in any of it never get counted. We are starting with the simplest fix: publish the calendar, build the trip, bring the people, count what happens.',
+    segmentsTitle: 'What we do',
     segments: {
+      // keys kept for template compatibility: clubs = travel, brands = economy
       clubs: {
-        eyebrow: 'Commercial value',
-        title: 'What a sports property is actually worth.',
-        body: 'Clubs, federations, leagues and events carry audiences that have never been counted in a form a sponsor can price. We build the attendance and audience baseline first, then translate it into a valuation a commercial partner can underwrite.',
+        eyebrow: 'Sports travel',
+        title: 'Trips built around the sporting year.',
+        body: 'A published calendar of Ethiopia’s sporting and cultural events, and packages built around the ones worth travelling for. Licensed local operators run the ground. We handle the calendar, the itinerary and the sale.',
         bullets: [
-          'Attendance and audience baselines',
-          'Sponsorship valuation method',
-          'Benchmarking against comparable markets',
-          'Diaspora audience measurement'
+          'Ethiopian sporting and cultural calendar',
+          'Race-week and match-week packages',
+          'Altitude training stays for runners',
+          'Add-ons for diaspora already travelling home'
         ]
       },
       brands: {
-        eyebrow: 'Economic impact',
-        title: 'What sport is worth to a city.',
-        body: 'Sport moves people, and moving people is an economy — travel, accommodation, spend, employment. We help cities and public bodies score their sports assets, measure the ones that carry real upside, and decide which to activate first.',
+        eyebrow: 'Sports economy',
+        title: 'What sport is worth to a city, measured rather than guessed.',
+        body: 'Because we bring the visitors, we hold the numbers: who came, from where, how long they stayed, what they spent. That is the baseline cities, federations and sponsors in Ethiopia have never had. We publish the method and put the data to work.',
         bullets: [
-          'Sports asset scoring and prioritisation',
-          'Visitor volume and spend measurement',
+          'Visitor volume and spend baselines',
           'Event economic impact studies',
-          'Activation plans with a 90-day metric'
+          'Sports asset scoring for cities and federations',
+          'Sponsorship valuation'
         ]
       }
     },
     ctaBlock: {
-      title: 'Working on the commercial or economic side of sport?',
-      body: 'Whether you run a sports property, shape a city tourism strategy, or need to price a sponsorship — start with a conversation.',
+      title: 'Coming to Ethiopia, or working on its sport?',
+      body: 'Whether you want to run at altitude, catch a derby on your trip home, or you run a club, a race, a hotel or a city and want to be on the calendar — get in touch.',
       cta: 'Get in touch'
     }
   },
@@ -116,7 +117,7 @@ export default {
     writing: 'Read the writing'
   },
   footer: {
-    tagline: 'Measurement for the sports economy. Ethiopia first.',
+    tagline: 'Sports travel and sports economy. Ethiopia.',
     rights: 'All rights reserved.',
     sections: {
       pages: 'Pages',
