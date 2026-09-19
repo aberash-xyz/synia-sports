@@ -1,7 +1,8 @@
 /**
  * Amharic (አማርኛ) translations.
- * Drafted to match the current English copy — NEEDS NATIVE REVIEW before the toggle
- * is re-enabled in src/lib/components/Nav.svelte.
+ * TODO: STALE. Drafted against the pre-September-2026 English copy. en.js has since been
+ * repositioned (measurement-first, locked tagline/blurb). Redraft from en.js, then NEEDS
+ * NATIVE REVIEW before the toggle is re-enabled in src/lib/components/Nav.svelte.
  * Reviewer notes: check business/technical terminology in particular —
  * "instrumentation", "baseline", "valuation", "asset", "bed-nights".
  */

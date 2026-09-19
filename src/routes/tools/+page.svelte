@@ -24,7 +24,7 @@
   <title>{$t('nav.tools')} — {$t('brand.name')}</title>
   <meta
     name="description"
-    content="Free working tools that implement the Synia Sports frameworks — asset scoring, portfolio plotting and measurement design for sport in emerging markets."
+    content="Free working tools that implement the Synia Sports frameworks: asset scoring, portfolio plotting and measurement design for sport in emerging markets."
   />
 </svelte:head>
 
@@ -33,9 +33,8 @@
     <span class="eyebrow">{$t('nav.tools')}</span>
     <h1>Methods you can run.</h1>
     <p class="lede">
-      Each framework we publish gets a working version of itself. These are the instruments, not
-      the write-ups — free to use, nothing uploaded, and built to survive a room full of people
-      arguing about real assets.
+      Each framework we publish gets a working version of itself. Free to use, nothing uploaded,
+      and built to survive a room full of people arguing about real assets.
     </p>
   </div>
 </section>

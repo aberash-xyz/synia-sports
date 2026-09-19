@@ -39,7 +39,7 @@
     <h1>Methods, published.</h1>
     <p class="lede">
       We publish how we measure before we report what we found. The frameworks below are free to
-      use, adapt and reproduce with attribution — they are more useful in a room than in a
+      use, adapt and reproduce with attribution. They are more useful in a room than in a
       proposal.
     </p>
   </div>
