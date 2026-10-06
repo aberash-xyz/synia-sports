@@ -43,7 +43,7 @@
 <header class="nav" bind:clientHeight={navH}>
   <div class="container container-lg nav-inner">
     <a class="logo" href="/">
-      <span class="logo-mark" aria-hidden="true"><img src="/black-logo-lettering.png" alt="synia letter logo small"/></span>
+      <span class="logo-mark" aria-hidden="true"><img src="/v2-logo-black.png" alt="synia letter logo small"/></span>
       <span class="logo-text">{$t('brand.name')}</span>
     </a>
 
@@ -110,7 +110,7 @@
     gap: 0.25rem;
     font-family: var(--font-heading);
     font-size: 1.4rem;
-    font-weight: var(--fw-semibold);
+    font-weight: var(--fw-medium);
     color: var(--text);
     letter-spacing: -0.01em;
   }

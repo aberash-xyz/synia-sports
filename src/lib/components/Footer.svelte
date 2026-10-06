@@ -8,7 +8,7 @@
   <div class="container container-lg footer-inner">
     <div class="brand">
       <div class="logo">
-        <img class="logo-mark" src="/black-logo-lettering.png"  alt="synia logo"/>
+        <img class="logo-mark" src="/v2-logo-black.png"  alt="synia logo"/>
         <span>{$t('brand.name')}</span>
       </div>
       <p class="tagline">{$t('footer.tagline')}</p>
@@ -58,7 +58,7 @@
     gap: 0.5rem;
     font-family: var(--font-heading);
     font-size: 1.5rem;
-    font-weight: var(--fw-semibold);
+    font-weight: var(--fw-medium);
   }
   .brand .logo-mark { color: var(--accent); }
   .tagline {
