@@ -436,7 +436,7 @@
     font-family: var(--font-heading);
     font-size: 0.95rem;
     letter-spacing: 0.05em;
-    color: var(--accent);
+    color: var(--accent-deep);
     margin-bottom: 0.5rem;
   }
 
@@ -601,7 +601,7 @@
   .verdict {
     font-size: 1.2rem;
   }
-  .verdict strong { color: var(--accent); }
+  .verdict strong { color: var(--accent-deep); }
 
   /* Tool CTA */
   .tool-cta {

@@ -145,7 +145,7 @@
     font-family: var(--font-heading);
     font-size: 0.95rem;
     font-weight: var(--fw-medium);
-    color: var(--accent);
+    color: var(--accent-deep);
     letter-spacing: 0.05em;
   }
   .offering-card h3 {

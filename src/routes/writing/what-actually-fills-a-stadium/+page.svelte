@@ -461,7 +461,7 @@
     font-family: var(--font-heading);
     font-size: 0.95rem;
     letter-spacing: 0.05em;
-    color: var(--accent);
+    color: var(--accent-deep);
     margin-bottom: 0.5rem;
   }
 
@@ -488,7 +488,7 @@
   .source-num {
     font-family: var(--font-heading);
     font-size: 0.95rem;
-    color: var(--accent);
+    color: var(--accent-deep);
     letter-spacing: 0.05em;
   }
   .source .finding {
@@ -562,7 +562,7 @@
     font-style: normal;
   }
   .verdict { font-size: 1.2rem; }
-  .verdict strong { color: var(--accent); }
+  .verdict strong { color: var(--accent-deep); }
 
   .sources-note { margin-bottom: 0; }
   .footnote {

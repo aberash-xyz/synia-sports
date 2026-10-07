@@ -17,11 +17,36 @@ export default {
     aria: 'Switch language'
   },
   home: {
-    eyebrow: 'Sports measurement. Ethiopia first.',
     title: 'Developing emerging sports markets',
     lede: 'Where the data doesn’t exist, we build it. Then we make it mean something. Audience size, sponsorship value, what an event is worth to a city.',
     ctaPrimary: 'What we do',
     ctaSecondary: 'Get in touch',
+    evidence: {
+      title: 'The audiences exist, but nobody is counting them.',
+      body: 'Ethiopia is the case in point. If you sell sponsorship there, buy it, or plan an event around it, the number you are missing can be collected. Most of the audience already carries the device to collect it with.'
+    },
+    figure: {
+      kicker: 'Fig. 1',
+      title: 'The figure most analyses use says 21% of the country is online. The phone network counts far more.',
+      unit: 'Millions. Bar length is share of a 135.5M population.',
+      rows: [
+        { label: 'Internet users, national estimate', source: 'DataReportal 2025', value: 28.9, muted: true, note: 'the number everyone quotes' },
+        { label: 'Mobile data users, Ethio Telecom only', source: 'FY2024/25', value: 46.6, circle: true, note: 'one operator alone. 1.6× the usual figure' },
+        { label: 'telebirr mobile money accounts', source: 'FY2024/25', value: 54.8 },
+        { label: 'Mobile connections', source: 'DataReportal 2025', value: 85.4 }
+      ],
+      note: 'Counts are not directly comparable. One person can hold several SIMs, and accounts include dormant ones. Internet users derived from DataReportal’s 21.3%; population from UNFPA 2025.',
+      link: 'Read the analysis'
+    },
+    timeline: {
+      title: 'When the number gets set decides whether anyone can use it.',
+      aria: 'Timeline comparing usual practice, where impact is estimated after the event if at all, with a baseline set before the deal, counted during the event and reported against afterwards.',
+      phases: ['Before the deal', 'Deal signed', 'Event', 'After'],
+      rows: [
+        { label: 'Usual practice', usual: true, marks: ['', '', '', 'Impact estimated, if at all'] },
+        { label: 'With a baseline', marks: ['Baseline set', '', 'Counted during', 'Reported against it'] }
+      ]
+    },
     proofTitle: 'Measure before, not after.',
     proofBody: 'In emerging sports markets, sponsorship is priced without an audience number behind it. The economic impact of an event is estimated after it has happened, if it is estimated at all. In both cases the number that matters is the baseline, and the baseline has to be set up front. We establish it before the deal is signed and before the event is run. Where the instrument to collect it does not exist, we build one. The method is built in Ethiopia to travel beyond it.',
     segmentsTitle: 'What we do',

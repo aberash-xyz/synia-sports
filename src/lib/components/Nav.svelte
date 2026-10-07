@@ -101,7 +101,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-block: 1rem;
+    padding-block: 0.6rem;
     gap: 2rem;
   }
   .logo {
@@ -109,7 +109,7 @@
     align-items: center;
     gap: 0.25rem;
     font-family: var(--font-heading);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: var(--fw-medium);
     color: var(--text);
     letter-spacing: -0.01em;
@@ -118,12 +118,11 @@
     color: var(--accent);
     font-size: 1.4rem;
     transform: translateY(2px);
-    max-height: 50px;
+    max-height: 34px;
   }
   .logo-mark>img {
-    height: 50px;
-    width: 50px;
-
+    height: 34px;
+    width: 34px;
   }
   .links {
     display: flex;
@@ -145,7 +144,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -0.4rem;
+    bottom: -0.3rem;
     height: 2px;
     background: var(--accent);
   }
@@ -157,7 +156,7 @@
   .nav-cta {
     display: inline-flex;
     align-items: center;
-    padding: 0.55rem 1rem;
+    padding: 0.4rem 0.85rem;
     background: var(--bg-invert);
     color: var(--text-invert);
     border-radius: var(--radius-button);

@@ -8,6 +8,7 @@
   /* Fonts — Crimson Pro (heading), Poppins (body), Noto Sans Ethiopic (Amharic) */
   --font-heading: "Crimson Pro", Georgia, "Noto Sans Ethiopic", serif;
   --font-body: "Poppins", "Noto Sans Ethiopic", system-ui, -apple-system, sans-serif;
+  --font-hand: "Caveat", "Bradley Hand", cursive; /* margin notes only */
 
   --fw-light: 300;
   --fw-normal: 400;
@@ -73,10 +74,17 @@
   --neutral-900: #000002;
 
   --primary: #111112;
-  --accent: #ebad7d;
-  --accent-soft: #fdf4ec;   /* tinted surfaces — Activate quadrant, active states */
-  --accent-deep: #8a4f1e;   /* accent as readable text on light backgrounds */
-  --accent-ring: rgba(235, 173, 125, 0.35);
+  /* Accent = logo orange (v2-logo-color.png). Gradient for big panels only. */
+  --accent: #fd882e;
+  --accent-strong: var(--accent);
+  --brand-gradient:
+    radial-gradient(ellipse at 15% 15%, #fa7447 0%, transparent 55%),
+    radial-gradient(ellipse at 10% 95%, #fdb07a 0%, transparent 60%),
+    radial-gradient(ellipse at 90% 85%, #f56e22 0%, transparent 55%),
+    #fd9a4f;
+  --accent-soft: #fff2e8;   /* tinted surfaces — Activate quadrant, active states */
+  --accent-deep: #a8460a;   /* accent as readable text on light backgrounds */
+  --accent-ring: rgba(253, 136, 46, 0.35);
   --grey-section: #f1f1f1;
   --grey-text: #606060;
   --text-medium: #313131;
@@ -111,12 +119,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Topographic texture behind every page. Fixed so it reads as paper, not content;
+   opaque sections (grey bands, footer) cover it on purpose. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url("/contours.svg") center / cover no-repeat;
+  opacity: 0.07;
+  pointer-events: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   color: var(--heading);
   margin: 0;
   letter-spacing: -0.01em;
 }
+h1, h2, h3 { text-wrap: balance; }
+p { text-wrap: pretty; }
 h1 { font-size: var(--fs-h1); line-height: var(--lh-h1); font-weight: var(--fw-h1); }
 h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); font-weight: var(--fw-h2); }
 h3 { font-size: var(--fs-h3); line-height: var(--lh-h3); font-weight: var(--fw-h3); }

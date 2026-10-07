@@ -107,7 +107,7 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
   }
-  .kind { color: var(--accent); }
+  .kind { color: var(--accent-deep); }
   .date { color: var(--text-muted); }
   .pieces h2 {
     margin-top: 0.6rem;
