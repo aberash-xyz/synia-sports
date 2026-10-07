@@ -292,7 +292,7 @@
   }
   .fig-link:hover { border-color: var(--text); }
 
-  /* Split: grey argument panel + logo-gradient diagram panel. */
+  /* Split: grey argument panel + white diagram panel with a logo-gradient border. */
   .split {
     display: grid;
     grid-template-columns: 5fr 7fr;
@@ -314,8 +314,13 @@
     color: var(--text-muted);
     line-height: 1.65;
   }
+  /* Gradient border: white fill clipped to the padding box over the logo gradient
+     on the border box, so the rounded corners follow the radius. */
   .split-visual {
-    background: var(--brand-gradient);
+    border: 3px solid transparent;
+    background:
+      linear-gradient(var(--bg-default), var(--bg-default)) padding-box,
+      var(--brand-gradient) border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -350,9 +355,11 @@
   .tl-track {
     position: relative;
     height: 4.5rem;
-    border-top: 2px solid var(--text);
+    /* Logo coral → orange along the rail. */
+    border-top: 3px solid;
+    border-image: linear-gradient(90deg, #fa7447, #fd882e 60%, #f56e22) 1;
   }
-  .tl-row.usual .tl-track { border-top-style: dashed; border-top-color: rgba(0, 0, 0, 0.45); }
+  .tl-row.usual .tl-track { border-image: none; border-top: 2px dashed rgba(0, 0, 0, 0.45); }
   .tl-row.usual .tl-label { color: var(--neutral-800); font-weight: var(--fw-medium); }
   .tl-mark {
     position: absolute;
@@ -365,15 +372,16 @@
   }
   .tl-mark i {
     position: absolute;
-    top: calc(-0.85rem - 7px);
+    top: calc(-0.85rem - 7.5px);
     left: 0;
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: var(--text);
+    background: var(--bg-default);
+    border: 2px solid var(--accent);
   }
   .tl-row.usual .tl-mark i {
-    background: #f78a3f; /* approximates the gradient where the dot lands; hides the dashed rail */
+    background: var(--bg-default); /* hides the dashed rail behind the hollow dot */
     border: 2px solid var(--text);
   }
 

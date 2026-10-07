@@ -22,7 +22,7 @@ export default {
     ctaPrimary: 'What we do',
     ctaSecondary: 'Get in touch',
     evidence: {
-      title: 'The audiences exist, but nobody is counting them.',
+      title: 'The audience exists, but nobody is counting it.',
       body: 'Ethiopia is the case in point. If you sell sponsorship there, buy it, or plan an event around it, the number you are missing can be collected. Most of the audience already carries the device to collect it with.'
     },
     figure: {
