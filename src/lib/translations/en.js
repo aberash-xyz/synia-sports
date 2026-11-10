@@ -22,7 +22,7 @@ export default {
     ctaPrimary: 'What we do',
     ctaSecondary: 'Get in touch',
     evidence: {
-      title: 'The audience exists, but nobody is counting it.',
+      title: 'The audience exists. The count does not, yet.',
       body: 'Ethiopia is the case in point. If you sell sponsorship there, buy it, or plan an event around it, the number you are missing can be collected. Most of the audience already carries the device to collect it with.'
     },
     figure: {
@@ -40,10 +40,10 @@ export default {
     },
     timeline: {
       title: 'When the number gets set decides whether anyone can use it.',
-      aria: 'Timeline comparing usual practice, where impact is estimated after the event if at all, with a baseline set before the deal, counted during the event and reported against afterwards.',
+      aria: 'Timeline comparing two approaches: impact estimated after the event, and a baseline set before the deal, counted during the event and reported against afterwards.',
       phases: ['Before the deal', 'Deal signed', 'Event', 'After'],
       rows: [
-        { label: 'Usual practice', usual: true, marks: ['', '', '', 'Impact estimated, if at all'] },
+        { label: 'Estimated after', usual: true, marks: ['', '', '', 'Impact estimated'] },
         { label: 'With a baseline', marks: ['Baseline set', '', 'Counted during', 'Reported against it'] }
       ]
     },
@@ -55,7 +55,7 @@ export default {
       clubs: {
         eyebrow: 'Audience',
         title: 'Who is watching, counted properly.',
-        body: 'Clubs and events carry audiences that have never been counted in a form anyone can price or plan around. We build the attendance and audience baseline first. What it is worth to a sponsor follows from the count, not the other way round.',
+        body: 'Clubs and events carry audiences that have rarely been counted in a form anyone can price or plan around. We build the attendance and audience baseline first. What it is worth to a sponsor follows from the count, not the other way round.',
         bullets: [
           'Attendance and audience baselines',
           'Diaspora audience measurement',
@@ -66,7 +66,7 @@ export default {
       brands: {
         eyebrow: 'Events and visitors',
         title: 'What sport is worth to a city, measured rather than guessed.',
-        body: 'Sport moves people, and moving people is an economy. We decide what to measure before the event, count it during, and report it after. That is the baseline most cities and federations have never had.',
+        body: 'Sport moves people, and moving people is an economy. We decide what to measure before the event, count it during, and report it after. That is the baseline a city or federation needs before it can price an event.',
         bullets: [
           'Visitor volume and spend baselines',
           'Event economic impact studies',
