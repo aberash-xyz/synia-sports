@@ -48,7 +48,7 @@ export default {
       ]
     },
     proofTitle: 'Measure before, not after.',
-    proofBody: 'In emerging sports markets, sponsorship is priced without an audience number behind it. The economic impact of an event is estimated after it has happened, if it is estimated at all. In both cases the number that matters is the baseline, and the baseline has to be set up front. We establish it before the deal is signed and before the event is run. Where the instrument to collect it does not exist, we build one. The method is built in Ethiopia to travel beyond it.',
+    proofBody: 'A sponsorship is worth what its audience is worth, and that audience has to be counted independently before anyone can price it. The economic impact of an event works the same way: the number that matters is the baseline, and the baseline has to be set up front. We establish it before the deal is signed and before the event is run. Where the instrument to collect it does not exist, we build one. The method is built in Ethiopia to travel beyond it.',
     segmentsTitle: 'What we do',
     segments: {
       // keys kept for template compatibility: clubs = audience, brands = events and visitors
