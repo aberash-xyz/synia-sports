@@ -26,7 +26,7 @@
 </script>
 
 <svelte:head>
-  <title>{$t('nav.writing')} — {$t('brand.name')}</title>
+  <title>{$t('nav.writing')} | {$t('brand.name')}</title>
   <meta
     name="description"
     content="Frameworks, methods and research on the commercial and economic side of sport in emerging markets."
@@ -38,9 +38,8 @@
     <span class="eyebrow">{$t('nav.writing')}</span>
     <h1>Methods, published.</h1>
     <p class="lede">
-      We publish how we measure before we report what we found. The frameworks below are free to
-      use, adapt and reproduce with attribution. They are more useful in a room than in a
-      proposal.
+      We publish how we measure before we produce reports. The frameworks and documents published below are free to
+      use, adapt and reproduce with attribution. 
     </p>
   </div>
 </section>

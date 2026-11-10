@@ -13,13 +13,13 @@
       key: 'activate',
       label: 'Activate',
       condition: 'Wide gap · Short clock',
-      job: 'This is the 90-day list. Underpriced and ready now. The work is commercial, not strategic — pick the metric, name the owner, start collecting.'
+      job: 'This is the 90-day list. Underpriced and ready now. The work is commercial, not strategic: pick the metric, name the owner, start collecting.'
     },
     {
       key: 'build',
       label: 'Build toward',
       condition: 'Wide gap · Long clock',
-      job: 'The job today is not revenue, it is pre-positioning. Decide now what data, what technical specification, and what event calendar the asset will need — those get roughly ten times cheaper to embed before construction finishes than after.'
+      job: 'The job today is not revenue, it is pre-positioning. Decide now what data, what technical specification, and what event calendar the asset will need. Those get roughly ten times cheaper to embed before construction finishes than after.'
     },
     {
       key: 'maintain',
@@ -31,18 +31,18 @@
       key: 'park',
       label: 'Park',
       condition: 'Narrow gap · Long clock',
-      job: 'Not abandoned — scheduled. Naming the binding constraint is the output here. If the constraint is roads rather than strategy, say so and set a date to revisit.'
+      job: 'Not abandoned, scheduled. Naming the binding constraint is the output here. If the constraint is roads rather than strategy, say so and set a date to revisit.'
     }
   ];
 
   const multipliers = [
     {
       name: 'Technology',
-      body: 'Instrumentation layered onto an existing asset — testing, wearables, recovery and performance data. Raises what a visitor is willing to pay without changing the underlying asset.'
+      body: 'Instrumentation layered onto an existing asset: testing, wearables, recovery and performance data. Raises what a visitor is willing to pay without changing the underlying asset.'
     },
     {
       name: 'Health',
-      body: 'Facilities built for visitors have off-peak capacity that serves residents and local clubs. Same asset, second constituency — and a domestic political story rather than only a foreign-currency one.'
+      body: 'Facilities built for visitors have off-peak capacity that serves residents and local clubs. Same asset, second constituency, and a domestic political story rather than only a foreign-currency one.'
     },
     {
       name: 'MICE adjacency',
@@ -52,10 +52,10 @@
 </script>
 
 <svelte:head>
-  <title>The Sports Asset Activation Framework — {$t('brand.name')}</title>
+  <title>The Sports Asset Activation Framework | {$t('brand.name')}</title>
   <meta
     name="description"
-    content="A framework for scoring, plotting and activating a portfolio of sports assets — built for cities and public bodies deciding where sports tourism investment should go first."
+    content="A framework for scoring, plotting and activating a portfolio of sports assets, built for cities and public bodies deciding where sports tourism investment should go first."
   />
 </svelte:head>
 
@@ -88,7 +88,7 @@
         deliberately not touching until 2029?</em>
       </p>
       <p>
-        Without that answer, attention distributes evenly across a portfolio — which in practice
+        Without that answer, attention distributes evenly across a portfolio, which in practice
         means the most visible asset absorbs the most resource, regardless of whether it is the
         one with the most value left on the table. This framework exists to force that
         distinction, and to make it defensible to someone who was not in the room.
@@ -103,7 +103,7 @@
       <h2>Score every asset on four things</h2>
       <p>
         Take the assets straight out of the plan you already have. Score each one on four axes.
-        The scoring is deliberately coarse — three or four bands, no decimals. Precision here is
+        The scoring is deliberately coarse: three or four bands, no decimals. Precision here is
         false comfort, and it slows the exercise down.
       </p>
 
@@ -125,7 +125,7 @@
       </div>
 
       <p>
-        Reach — who travels for the asset, and how far — is worth writing down beside each score,
+        Reach (who travels for the asset, and how far) is worth writing down beside each score,
         but do not score it. It is evidence for the ceiling rather than a fourth judgement, and
         turning it into a band invites an argument about geography when the question is size.
       </p>
@@ -134,7 +134,7 @@
         <h3>Why four axes when you only plot two?</h3>
         <p>
           <strong>Gap and Clock tell you what to do. Moat and Ceiling tell you what to do first.</strong>
-          When several assets land in the same quadrant — and they will — you sequence them by
+          When several assets land in the same quadrant (and they will), you sequence them by
           moat, then by ceiling. A strong moat means nobody can copy the position out from under
           you; a large ceiling means the upside is worth the effort. Two assets can be equally
           ready and equally underpriced, and still deserve very different amounts of
@@ -150,13 +150,13 @@
       <span class="step">Step 2</span>
       <h2>Plot gap against clock</h2>
       <p>
-        Gap on the vertical axis, clock on the horizontal. Four quadrants, and — this is the
-        part that matters — four genuinely different jobs. An asset's quadrant does not tell you
+        Gap on the vertical axis, clock on the horizontal. Four quadrants. This is the
+        part that matters: four genuinely different jobs. An asset's quadrant does not tell you
         how important it is. It tells you what kind of work it needs this year.
       </p>
       <p>
-        Wide and narrow split at the midpoint of the gap scale, which sits below the Large band
-        — an asset can score Medium on the axis and still belong in the upper half.
+        Wide and narrow split at the midpoint of the gap scale, which sits below the Large band:
+        an asset can score Medium on the axis and still belong in the upper half.
       </p>
 
       <div class="matrix" role="img" aria-label="Two-by-two matrix plotting value gap against time to activate">
@@ -173,7 +173,7 @@
 
       <p>
         The <strong>Park</strong> quadrant does more work than it looks like it does. Every
-        portfolio contains an asset that matters politically but cannot move this year — a
+        portfolio contains an asset that matters politically but cannot move this year: a
         domestic product blocked by road quality, a regional circuit blocked by air links.
         Parking it explicitly, with the constraint named and a review date attached, is what
         lets a team honour the ambition without pretending it is actionable. The alternative is
@@ -204,21 +204,21 @@
         named person responsible for it, one method that can run this quarter.
       </p>
       <p class="pull">
-        If you cannot name the collection method, the asset is not ready to activate — regardless
+        If you cannot name the collection method, the asset is not ready to activate, regardless
         of where it plotted.
       </p>
       <p>
         That test is unforgiving on purpose. It is also more often passed than people expect.
         The instinct in a low-data environment is to assume nothing is measurable and to design
         a survey instrument from scratch. In practice the number usually already exists inside
-        somebody's business — it has simply never been asked for. A camp operator knows their
+        somebody's business. It has simply never been asked for. A camp operator knows their
         bed-nights. A club knows its gate. A federation knows its registered participants. A
         monthly one-line return from four operators is a functioning measurement system, and it
         can be running within a quarter.
       </p>
       <p>
         The gap in most emerging sports markets is not the absence of digital infrastructure.
-        It is the absence of instrumentation — nobody has been asked to collect, in a structured
+        It is the absence of instrumentation: nobody has been asked to collect, in a structured
         form, what they already know.
       </p>
     </div>
@@ -232,7 +232,7 @@
       <p>
         Technology, health and MICE adjacency are not separate assets and should never be scored
         as such. They are layers applied to an existing asset to raise its ceiling. The same
-        asset, higher potential value — which moves its gap score, and can move it into a
+        asset, higher potential value, which moves its gap score, and can move it into a
         different quadrant.
       </p>
       <div class="multipliers">
@@ -263,7 +263,7 @@
 
       <p>
         <strong>A strong moat and a niche ceiling is not a contradiction.</strong> The global
-        pull is real — athletes fly in from three continents — but the number of people who will
+        pull is real (athletes fly in from three continents), but the number of people who will
         ever do this is a few thousand a year, and today they are long-stay and low-spend. That
         is the ceiling. It is also why the multipliers matter more here than volume does.
       </p>
@@ -283,7 +283,7 @@
       <p>
         The health layer compounds it. A testing and recovery facility built for visiting
         athletes has capacity off-peak that serves residents and local clubs. Same asset, second
-        constituency — and it converts a foreign-currency argument into a domestic one, which
+        constituency, and it converts a foreign-currency argument into a domestic one, which
         is usually what a public body actually needs in order to fund it.
       </p>
 
@@ -291,10 +291,10 @@
         <h3>Now score the stadium</h3>
         <p>
           Run the same four axes on a stadium under construction and it lands somewhere else
-          entirely: wide gap, long clock — <strong>Build toward</strong>. Same portfolio, same
+          entirely: wide gap, long clock: <strong>Build toward</strong>. Same portfolio, same
           scoring, completely different job this year. The stadium's near-term work is not
           revenue. It is deciding, now, what data capture, what technical specification and
-          what event calendar the building needs — because embedding those before completion
+          what event calendar the building needs, because embedding those before completion
           costs a fraction of retrofitting them afterwards.
         </p>
         <p>That contrast is the lesson. The framework does not rank assets. It assigns them different work.</p>
@@ -309,17 +309,17 @@
       <h2>Running it with a team</h2>
       <ol class="build">
         <li>
-          <strong>15 minutes — score and plot.</strong> Teams take four or five assets straight
+          <strong>15 minutes: score and plot.</strong> Teams take four or five assets straight
           out of their own plan. Not hypotheticals. The exercise only works on real assets the
           team already argues about.
         </li>
         <li>
-          <strong>10 minutes — one activation card.</strong> Pick a single asset from the
+          <strong>10 minutes: one activation card.</strong> Pick a single asset from the
           Activate quadrant and fill in: the one metric, who owns it, how it gets collected this
           quarter, one multiplier to test, and what "working" looks like in 90 days.
         </li>
         <li>
-          <strong>5 minutes — report out.</strong> One card per team, read aloud. The cards are
+          <strong>5 minutes: report out.</strong> One card per team, read aloud. The cards are
           the artefact people leave with; the scorecard is the tool they re-run later.
         </li>
       </ol>
@@ -334,7 +334,7 @@
         In most emerging markets the
         domestic club game today is a maintain-or-build asset with a strong domestic economy
         story and a weak international tourism one. The stadium plus continental fixtures is a
-        separate asset, and it sits in <strong>Build toward</strong> — with rising continental
+        separate asset, and it sits in <strong>Build toward</strong>, with rising continental
         competitiveness as the case for why its ceiling is going up.
       </p>
       <p>
@@ -357,7 +357,7 @@
       <ul class="comparables">
         <li>
           <strong>Iten, Kenya.</strong> The clearest case of an altitude-running asset converted
-          into a durable visitor economy — camps, accommodation, coaching, and a global
+          into a durable visitor economy: camps, accommodation, coaching, and a global
           reputation built over decades. Worth studying for the shape of the demand and for how
           little of the value was captured formally in the early years.
         </li>

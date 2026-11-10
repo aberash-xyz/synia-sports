@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-  <title>{$page.status} — {$t('brand.name')}</title>
+  <title>{$page.status} | {$t('brand.name')}</title>
   <meta name="robots" content="noindex" />
 </svelte:head>
 

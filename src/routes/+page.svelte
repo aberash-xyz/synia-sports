@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-  <title>{$t('brand.name')} — {$t('home.title')}</title>
+  <title>{$t('brand.name')} | {$t('home.title')}</title>
 </svelte:head>
 
 <!-- HERO -->

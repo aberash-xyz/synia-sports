@@ -21,7 +21,7 @@
 </script>
 
 <svelte:head>
-  <title>{$t('nav.tools')} — {$t('brand.name')}</title>
+  <title>{$t('nav.tools')} | {$t('brand.name')}</title>
   <meta
     name="description"
     content="Free working tools that implement the Synia Sports frameworks: asset scoring, portfolio plotting and measurement design for sport in emerging markets."

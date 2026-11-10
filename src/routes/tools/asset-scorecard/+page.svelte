@@ -12,7 +12,7 @@
 </script>
 
 <svelte:head>
-  <title>Asset scorecard &amp; portfolio plot — {$t('brand.name')}</title>
+  <title>Asset scorecard &amp; portfolio plot | {$t('brand.name')}</title>
   <meta
     name="description"
     content="An interactive tool for scoring sports assets on moat, ceiling, gap, clock and sellability, and plotting them into the activate / build / maintain / park matrix."

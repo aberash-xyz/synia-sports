@@ -5,7 +5,7 @@
     {
       cite: 'Rintaugu, E. G., Mwangi, F. K., & Ndiwa, T. (2019). Organizational factors influencing football development in East African countries. Soccer & Society, 20(1), 107–121.',
       finding:
-        'Governance deficiencies, inadequate funding structures and weak commercial infrastructure are the primary constraints on league development across Kenya, Uganda and Tanzania — not talent, and not interest.'
+        'Governance deficiencies, inadequate funding structures and weak commercial infrastructure are the primary constraints on league development across Kenya, Uganda and Tanzania, not talent, and not interest.'
     },
     {
       cite: 'Semon, H. (2022). Identity and dissent in Ethiopian football fandom (2012–2019). Journal of Eastern African Studies, 16(2), 234–252.',
@@ -15,7 +15,7 @@
     {
       cite: 'Richau, L., Emrich, E., Follert, F., & Pierdzioch, C. (2022). New sports stadia for Africa? The impact of sportscape features on attendance intentions in sub-Saharan African club football. European Sport Management Quarterly, 23(4), 1–22.',
       finding:
-        'Attendance in developing African football markets is driven by facility experience, social belonging and organisational trust — not by competitive uncertainty.'
+        'Attendance in developing African football markets is driven by facility experience, social belonging and organisational trust, not by competitive uncertainty.'
     },
     {
       cite: 'Schreyer, D., & Ansari, P. (2022). Stadium attendance demand research: A scoping review. Journal of Sport Management, 36(2), 165–180.',
@@ -26,10 +26,10 @@
 </script>
 
 <svelte:head>
-  <title>What Actually Fills a Stadium — {$t('brand.name')}</title>
+  <title>What Actually Fills a Stadium | {$t('brand.name')}</title>
   <meta
     name="description"
-    content="Research on attendance in sub-Saharan African football finds that facility experience, social belonging and organisational trust drive attendance — not competitive uncertainty. What that means for Ethiopian football, and two things I got wrong."
+    content="Research on attendance in sub-Saharan African football finds that facility experience, social belonging and organisational trust drive attendance, not competitive uncertainty. What that means for Ethiopian football, and two things I got wrong."
   />
 </svelte:head>
 
@@ -42,12 +42,12 @@
       <h1>What actually fills a stadium</h1>
       <p class="standfirst">
         The research on African football attendance says something most commercial thinking about
-        the game gets backwards. Working through what it means for Ethiopian football — including
+        the game gets backwards. Working through what it means for Ethiopian football, including
         two conclusions of my own that it overturns.
       </p>
       <p class="byline">
         Adapted from <em>Synia Sports: A Fan Development and Commercial Intelligence Business Plan
-        for Emerging African Football Markets</em> — capstone research, MSA, Northwestern
+        for Emerging African Football Markets</em>: capstone research, MSA, Northwestern
         University, 2026. Revised where I now think the original was wrong.
       </p>
     </div>
@@ -62,7 +62,7 @@
       </p>
       <p>
         On one side: 135.5 million people, a median age of 19.1 years, and roughly 57.4 million
-        of them under 25 — one of the largest youth demographics on earth (UNFPA, 2025). Addis
+        of them under 25, one of the largest youth demographics on earth (UNFPA, 2025). Addis
         Ababa alone holds about six million people and is growing at over four percent a year
         (World Population Review, 2026). Add a diaspora of 2.5 to 3 million with genuine
         emotional attachment to the domestic game. By any structural measure this is a market
@@ -91,7 +91,7 @@
         What the numbers above actually describe is a loop that feeds itself. Low attendance
         suppresses sponsor interest. Thin sponsorship limits revenue. Limited revenue prevents
         any investment in the matchday product. And a product nobody has invested in gives
-        people no particular reason to show up — which returns you to low attendance, one season
+        people no particular reason to show up, which returns you to low attendance, one season
         later and slightly worse.
       </p>
       <p class="pull">
@@ -130,8 +130,8 @@
       <p>
         The Richau finding is the one that should change how clubs behave, and it is the one most
         likely to be dismissed by people who reason about attendance from European experience.
-        In developed leagues, a substantial body of work links attendance to competitive balance
-        — the closer the title race, the fuller the ground. It is an intuitive result and it
+        In developed leagues, a substantial body of work links attendance to competitive balance:
+        the closer the title race, the fuller the ground. It is an intuitive result and it
         travels badly.
       </p>
       <p>
@@ -139,7 +139,7 @@
         <strong>facility experience, social belonging and organisational trust</strong>. Whether
         the match is likely to be close does not do the work people assume it does. Whether
         someone can find their seat, sit with people they know, trust that the gate will open
-        when it says it will, and get home afterwards — that does.
+        when it says it will, and get home afterwards: that does.
       </p>
       <p>
         Put beside Semon's documentation of how deep club identity runs in Ethiopian fandom, the
@@ -166,16 +166,16 @@
         Ethiopian market uses those numbers or ones like them.
       </p>
       <p>
-        The same source reports something else: <strong>85.4 million mobile connections — 63.8
+        The same source reports something else: <strong>85.4 million mobile connections, or 63.8
         percent of the population.</strong> I quoted that figure too, and did not sit with the
         tension between it and the conclusion I drew from the others.
       </p>
       <p>
-        Operator reporting points the same way, and harder. For the financial year ending June
+        Operator reporting points the same way. For the financial year ending June
         2025, Ethio Telecom reported <strong>46.6 million mobile data users</strong> against a
         total base of 83.2 million subscribers, and <strong>54.84 million telebirr accounts</strong>
-        through which 2.38 trillion birr moved in that year alone. Safaricom Ethiopia — a second
-        operator, absent from those totals — reported 14.7 million active customers by June 2026.
+        through which 2.38 trillion birr moved in that year alone. Safaricom Ethiopia, a second
+        operator (absent from those totals), reported 14.7 million active customers by June 2026.
       </p>
       <p>
         These figures are not directly comparable to DataReportal's, and it would be sloppy to
@@ -189,7 +189,7 @@
         The problem is the unit of analysis. A national penetration figure for Ethiopia averages
         across a large rural majority. It is a real number and it answers a real question, but it
         is not the question a club is asking. The relevant population is not "Ethiopians." It is
-        people who attend Ethiopian Premier League matches — overwhelmingly urban, concentrated
+        people who attend Ethiopian Premier League matches: overwhelmingly urban, concentrated
         in Addis Ababa, and skewed young and male. There is no serious reason to think that
         group's connectivity resembles the national average, and good reason to think it is
         dramatically higher.
@@ -201,7 +201,7 @@
         This is not a small correction. It changes what kind of problem this is. If the audience
         genuinely cannot be reached digitally, you are facing an infrastructure problem that
         takes a decade and a telecoms operator to solve. If the audience is reachable and simply
-        has never been asked for anything, you are facing an instrumentation problem — and
+        has never been asked for anything, you are facing an instrumentation problem, and
         instrumentation is a quarter's work, not a decade's.
       </p>
       <p>
@@ -265,7 +265,7 @@
           One part of the original argument holds regardless of collection method, and it is the
           part that matters commercially. A valuation built on attendance figures supplied by the
           organisation being valued is not evidence. Whoever operates the collection system needs
-          to be independent of the club whose asset is being priced — that is the difference
+          to be independent of the club whose asset is being priced. That is the difference
           between a number a sponsor can underwrite and a number a sponsor is asked to trust.
         </p>
         <p>
@@ -330,14 +330,14 @@
         <div><span>Clock</span><strong>1–3 years</strong><em>Requires a season of baseline before anything is sellable</em></div>
       </div>
 
-      <p class="verdict">Large gap, long clock. <strong>Build toward</strong> — not Activate.</p>
+      <p class="verdict">Large gap, long clock. <strong>Build toward</strong>, not Activate.</p>
 
       <p>
         That will be an unpopular reading in a room that cares about football, so it is worth
         being precise about what it does and does not say. It does not say the domestic game is
         unimportant, or that it should be deprioritised. It says the work this year is
-        pre-positioning rather than revenue, and that treating it as an Activate asset — pitching
-        sponsors now, on numbers that do not yet exist — is the mistake that has already been
+        pre-positioning rather than revenue, and that treating it as an Activate asset (pitching
+        sponsors now, on numbers that do not yet exist) is the mistake that has already been
         made repeatedly.
       </p>
       <p>
@@ -349,19 +349,19 @@
       </p>
       <p>
         Two adjacent assets score differently and deserve separating out. <strong>Diaspora
-        engagement</strong> has a materially shorter clock — the 2024 collaboration between D.C.
+        engagement</strong> has a materially shorter clock: the 2024 collaboration between D.C.
         United and the Ethiopian Football Federation that brought Saint George FC and Ethiopian
         Coffee SC to Audi Field drew a substantial crowd and established the proof of concept
         publicly. That audience is reachable today, on platforms that already exist, with no
-        infrastructure to build. And <strong>event hosting rights</strong> — continental fixtures,
-        regional tournaments — carry their own economics, largely independent of domestic league
+        infrastructure to build. And <strong>event hosting rights</strong> (continental fixtures,
+        regional tournaments) carry their own economics, largely independent of domestic league
         attendance.
       </p>
       <p>
         Which produces a conclusion worth stating plainly, because it is where this argument will
         be contested: international football tourism is a hard market for an emerging league to
         enter, and the realistic near-term prize is regional and diaspora travel plus hosting
-        rights — not global audiences for the domestic product. The scoring keeps producing that
+        rights, not global audiences for the domestic product. The scoring keeps producing that
         answer. It is less exciting than the alternative and it has the advantage of being
         defensible.
       </p>
@@ -380,7 +380,7 @@
       <p>
         The research is fairly unified on where to start. Not with the product on the pitch, and
         not with a pitch deck. With the unglamorous work of making it easy to attend, and then
-        counting — consistently, independently, and in a form somebody outside the building can
+        counting: consistently, independently, and in a form somebody outside the building can
         check.
       </p>
       <p class="footnote sources-note">
@@ -395,7 +395,7 @@
         This piece revises two conclusions from the original capstone research: the
         characterisation of Ethiopia as a low-data market, and the physical data-collection
         infrastructure that followed from it. The academic findings and market data cited are
-        unchanged. Where the original was wrong, it was wrong in a direction worth naming —
+        unchanged. Where the original was wrong, it was wrong in a direction worth naming:
         it accepted a national statistic as a description of a specific audience.
       </p>
     </div>
