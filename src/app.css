@@ -5,9 +5,10 @@
  */
 
 :root {
-  /* Fonts — Crimson Pro (heading), Poppins (body), Noto Sans Ethiopic (Amharic) */
-  --font-heading: "Crimson Pro", Georgia, "Noto Sans Ethiopic", serif;
-  --font-body: "Poppins", "Noto Sans Ethiopic", system-ui, -apple-system, sans-serif;
+  /* Fonts — Geist (headings + body), Geist Mono (labels, figures), Noto Sans Ethiopic (Amharic) */
+  --font-heading: "Geist", "Inter", "Noto Sans Ethiopic", system-ui, sans-serif;
+  --font-body: "Geist", "Inter", "Noto Sans Ethiopic", system-ui, -apple-system, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
   --font-hand: "Caveat", "Bradley Hand", cursive; /* margin notes only */
 
   --fw-light: 300;
@@ -59,10 +60,14 @@
   --container-lg: 90rem;
 
   /* Radii */
-  --radius-sm: 0.5rem;
-  --radius-md: 1rem;
-  --radius-lg: 1.625rem;
-  --radius-button: 5rem;
+  /* Near-square: the lab register reads as ruled paper, not pills. */
+  --radius-sm: 2px;
+  --radius-md: 2px;
+  --radius-lg: 4px;
+  --radius-button: 2px;
+
+  /* The framed column every page sits in; vertical hairlines run its full height. */
+  --frame: 76rem;
 
   /* Palette (light) */
   --neutral-50: #fffffe;
@@ -135,7 +140,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   color: var(--heading);
   margin: 0;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.025em;
 }
 h1, h2, h3 { text-wrap: balance; }
 p { text-wrap: pretty; }
@@ -151,8 +156,8 @@ a { color: inherit; text-decoration: none; }
 
 /* When lang=am, prefer Ethiopic font ordering & loosen line height */
 html[lang="am"] {
-  --font-heading: "Noto Sans Ethiopic", "Crimson Pro", serif;
-  --font-body: "Noto Sans Ethiopic", "Poppins", sans-serif;
+  --font-heading: "Noto Sans Ethiopic", "Geist", sans-serif;
+  --font-body: "Noto Sans Ethiopic", "Geist", sans-serif;
   --body-lh: 1.7;
 }
 html[lang="am"] h1,
@@ -168,6 +173,12 @@ html[lang="am"] h3 {
 .container-md { max-width: var(--container-md); }
 .container-lg { max-width: var(--container-lg); }
 
+.frame {
+  max-width: var(--frame);
+  margin-inline: auto;
+  border-inline: 1px solid var(--border);
+}
+
 .section { padding-block: var(--section-padding); }
 .section-lg { padding-block: var(--section-padding-lg); }
 .section-grey { background: var(--bg-grey); }
@@ -176,23 +187,13 @@ html[lang="am"] h3 {
 
 .eyebrow {
   display: inline-block;
-  font-family: var(--font-body);
-  font-size: var(--fs-small);
-  font-weight: var(--fw-medium);
-  letter-spacing: 0.1rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-tiny);
+  font-weight: var(--fw-normal);
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: var(--sp-sm);
-}
-.eyebrow::before {
-  content: "";
-  display: inline-block;
-  width: 1.75rem;
-  height: 2px;
-  margin-right: 0.6rem;
-  vertical-align: middle;
-  transform: translateY(-1px);
-  background: var(--accent);
 }
 
 .muted { color: var(--text-muted); }

@@ -2,11 +2,17 @@
   import '../app.css';
   import Nav from '$lib/components/Nav.svelte';
   import Footer from '$lib/components/Footer.svelte';
+  import { t } from '$lib/i18n.js';
 </script>
+
+<a class="announce" href={$t('announce.href')}>
+  <span class="chip">{$t('announce.chip')}</span>
+  {$t('announce.text')} <span aria-hidden="true">↗</span>
+</a>
 
 <Nav />
 
-<main>
+<main class="frame">
   <slot />
 </main>
 
@@ -16,5 +22,28 @@
   main {
     display: block;
     min-height: 60vh;
+    padding-bottom: 6rem;
+  }
+  .announce {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.5rem var(--global-padding);
+    background: var(--accent);
+    color: var(--primary);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-medium);
+    text-align: center;
+  }
+  .announce:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .chip {
+    padding: 0.1rem 0.35rem;
+    background: var(--primary);
+    color: var(--text-invert);
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
   }
 </style>

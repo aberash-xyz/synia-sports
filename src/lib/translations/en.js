@@ -12,15 +12,40 @@ export default {
     cta: 'Get in touch',
     menu: 'Menu'
   },
+  announce: {
+    chip: 'Latest',
+    text: 'What actually fills a stadium: the research on African football attendance',
+    href: '/writing/what-actually-fills-a-stadium'
+  },
   lang: {
     toggle: 'አማ',
     aria: 'Switch language'
   },
   home: {
     title: 'Developing emerging sports markets',
+    // Hero renders: titleLead [rotating word] / titleTail. English only.
+    titleLead: 'Developing',
+    titleWords: ['emerging', 'unmeasured', 'East African', 'overlooked'],
+    titleTail: 'sports markets',
     lede: 'Where the data doesn’t exist, we build it. Then we make it mean something. Audience size, sponsorship value, what an event is worth to a city.',
     ctaPrimary: 'What we do',
     ctaSecondary: 'Get in touch',
+    // Every stat carries its source; no figures about Synia itself.
+    stats: {
+      label: 'Ethiopia, the first market we measure',
+      items: [
+        { value: '135.5M', label: 'Population', source: 'UNFPA 2025' },
+        { value: '85.4M', label: 'Mobile connections', source: 'DataReportal 2025' },
+        { value: '46.6M', label: 'Mobile data users, one operator', source: 'Ethio Telecom FY2024/25' }
+      ]
+    },
+    feature: {
+      chip: 'Free tool',
+      title: 'Score a portfolio of sports assets',
+      body: 'The Sports Asset Activation Framework, as a working tool. Free to use, nothing uploaded.',
+      cta: 'Open the scorecard',
+      href: '/tools/asset-scorecard'
+    },
     evidence: {
       title: 'The audience exists. The count does not, yet.',
       body: 'Ethiopia is the case in point. If you sell sponsorship there, buy it, or plan an event around it, the number you are missing can be collected. Most of the audience already carries the device to collect it with.'

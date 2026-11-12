@@ -1,6 +1,24 @@
 <script>
-  import { t } from '$lib/i18n.js';
+  import { t, locale } from '$lib/i18n.js';
   import Button from '$lib/components/Button.svelte';
+
+  // Typewriter: hold word, delete, type next. SSR and reduced-motion show first word static.
+  let typed = $state($t('home.titleWords')[0]);
+  $effect(() => {
+    const words = $t('home.titleWords');
+    if ($locale !== 'en' || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    let i = 0, n = words[0].length, deleting = true, timer;
+    const tick = () => {
+      n += deleting ? -1 : 1;
+      typed = words[i].slice(0, n);
+      let wait = deleting ? 45 : 90;
+      if (!deleting && n === words[i].length) { deleting = true; wait = 2200; }
+      else if (deleting && n === 0) { deleting = false; i = (i + 1) % words.length; wait = 350; }
+      timer = setTimeout(tick, wait);
+    };
+    timer = setTimeout(tick, 2500);
+    return () => clearTimeout(timer);
+  });
 </script>
 
 <svelte:head>
@@ -9,8 +27,14 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="container container-sm">
-    <h1 class="hero-title">{$t('home.title')}</h1>
+  <div class="container">
+    {#if $locale === 'en'}
+      <h1 class="hero-title" aria-label={$t('home.title')}>
+        <span aria-hidden="true">{$t('home.titleLead')} <span class="rotator">{typed}</span><br />{$t('home.titleTail')}</span>
+      </h1>
+    {:else}
+      <h1 class="hero-title">{$t('home.title')}</h1>
+    {/if}
     <p class="lede">{$t('home.lede')}</p>
     <div class="cta-row">
       <Button href="/about" variant="primary">{$t('home.ctaPrimary')}</Button>
@@ -19,9 +43,34 @@
   </div>
 </section>
 
+<!-- STATS: sourced market figures, not company metrics -->
+<section class="stats">
+  <div class="container">
+    <p class="eyebrow">{$t('home.stats.label')}</p>
+    <dl class="stat-row">
+      {#each $t('home.stats.items') as stat}
+        <div class="stat">
+          <dt class="stat-value">{stat.value}</dt>
+          <dd>{stat.label}<span>{stat.source}</span></dd>
+        </div>
+      {/each}
+    </dl>
+  </div>
+</section>
+
+<!-- FEATURE: one flagship thing, full frame width -->
+<section class="feature">
+  <div class="feature-inner">
+    <span class="chip">{$t('home.feature.chip')}</span>
+    <h2>{$t('home.feature.title')}</h2>
+    <p>{$t('home.feature.body')}</p>
+    <Button href={$t('home.feature.href')} variant="primary">{$t('home.feature.cta')}</Button>
+  </div>
+</section>
+
 <!-- PROOF STATEMENT: argument left, the same argument drawn on the right -->
-<section>
-  <div class="container container-lg split">
+<section class="section">
+  <div class="container split">
     <div class="split-text">
       <h2>{$t('home.proofTitle')}</h2>
       <p>{$t('home.proofBody')}</p>
@@ -50,8 +99,8 @@
 </section>
 
 <!-- EVIDENCE -->
-<section class="section evidence-section">
-  <div class="container container-sm evidence">
+<section class="section">
+  <div class="container evidence">
     <h2>{$t('home.evidence.title')}</h2>
     <p class="lede">{$t('home.evidence.body')}</p>
     <figure class="fig">
@@ -89,8 +138,8 @@
 </section>
 
 <!-- SEGMENTS -->
-<section class="section section-lg">
-  <div class="container container-lg">
+<section class="section">
+  <div class="container">
     <h2 class="segments-heading">{$t('home.segmentsTitle')}</h2>
     <div class="segments">
       <article class="segment-card">
@@ -120,7 +169,7 @@
 
 <!-- CTA BLOCK -->
 <section class="section">
-  <div class="container container-md">
+  <div class="container">
     <div class="cta-block">
       <h2>{$t('home.ctaBlock.title')}</h2>
       <p class="lede">{$t('home.ctaBlock.body')}</p>
@@ -130,17 +179,16 @@
 </section>
 
 <style>
-  .hero {
-    padding-block: clamp(2.5rem, 7vw, 5rem) clamp(3rem, 8vw, 6rem);
-    text-align: center;
-  }
+  /* Every section after the hero is separated by a full-frame hairline. */
+  section + section { border-top: 1px solid var(--border); }
+
+  .hero { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
   .hero-title {
     font-size: var(--fs-hero);
     line-height: var(--lh-hero);
-    font-weight: var(--fw-semibold);
-    letter-spacing: -0.02em;
-    max-width: 22ch;
-    margin-inline: auto;
+    font-weight: var(--fw-normal);
+    letter-spacing: -0.045em;
+    max-width: 18ch;
   }
   .lede {
     margin-top: 1.5rem;
@@ -149,16 +197,115 @@
     color: var(--text-muted);
     line-height: 1.6;
   }
-  .hero .lede { margin-inline: auto; max-width: 40rem; }
+  .rotator {
+    color: var(--accent-deep);
+    white-space: nowrap;
+    border-right: 0.06em solid currentColor;
+    padding-right: 0.04em;
+    animation: caret 1s steps(1) infinite;
+  }
+  @keyframes caret { 50% { border-color: transparent; } }
+  @media (prefers-reduced-motion: reduce) { .rotator { animation: none; border-right: 0; } }
+  .hero .lede { max-width: 44rem; }
   .cta-row {
     margin-top: 2.25rem;
     display: flex;
-    justify-content: center;
     gap: 0.75rem;
     flex-wrap: wrap;
   }
 
-  .evidence-section { padding-bottom: 0; }
+  .stats { padding-block: 1.75rem 2.25rem; }
+  .stats .eyebrow { margin-bottom: 1.25rem; }
+  .stat-row {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .stat {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding-inline: 2rem;
+  }
+  .stat:first-child { padding-left: 0; }
+  .stat + .stat { border-left: 1px solid var(--border); }
+  .stat-value {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    font-variant-numeric: tabular-nums;
+  }
+  .stat:first-child .stat-value { color: var(--accent-deep); }
+  .stat dd {
+    margin: 0;
+    font-size: var(--fs-small);
+    line-height: 1.25;
+    color: var(--text-muted);
+  }
+  .stat dd span {
+    display: block;
+    margin-top: 0.2rem;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--text-muted);
+  }
+
+  /* Feature: dark panel with the contour texture standing in for photography. */
+  .feature {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-invert);
+    color: var(--text-invert);
+    text-align: center;
+  }
+  .feature::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("/contours.svg") center / cover no-repeat;
+    filter: invert(1);
+    opacity: 0.18;
+  }
+  .feature::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 60%;
+    background: var(--brand-gradient);
+    opacity: 0.22;
+    mask-image: linear-gradient(transparent, #000);
+  }
+  .feature-inner {
+    position: relative;
+    z-index: 1;
+    padding: clamp(5rem, 12vw, 9rem) var(--global-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  .feature h2 {
+    color: var(--text-invert);
+    font-size: clamp(2.25rem, 5vw, 3.75rem);
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+    max-width: 18ch;
+  }
+  .feature p {
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 36rem;
+    margin-bottom: 0.75rem;
+  }
+  .chip {
+    padding: 0.2rem 0.5rem;
+    background: var(--accent);
+    color: var(--primary);
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
   .evidence h2 { max-width: 26ch; }
   .evidence .lede { max-width: 40rem; }
 
@@ -171,9 +318,10 @@
     padding-top: 1.25rem;
   }
   .fig-kicker {
+    font-family: var(--font-mono);
     font-size: var(--fs-tiny);
-    font-weight: var(--fw-medium);
-    letter-spacing: 0.12em;
+    font-weight: var(--fw-normal);
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--accent-deep);
   }
@@ -221,7 +369,7 @@
     position: relative;
     min-width: 3ch;
     text-align: right;
-    font-family: var(--font-heading);
+    font-family: var(--font-mono);
     font-size: 1.25rem;
     font-variant-numeric: tabular-nums;
   }
@@ -340,9 +488,9 @@
     grid-template-columns: repeat(4, 1fr);
     padding-bottom: 0.75rem;
     border-bottom: 1px solid var(--text);
+    font-family: var(--font-mono);
     font-size: var(--fs-tiny);
-    font-weight: var(--fw-medium);
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
   }
   .tl-phases span { padding-right: 0.75rem; }
@@ -391,21 +539,17 @@
   .segments {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    border-block: 1px solid var(--border);
   }
   .segment-card {
-    background: var(--bg-default);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: 2.5rem;
+    padding: 2.5rem 2.5rem 2.5rem 0;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    transition: transform 0.35s ease, border-color 0.35s ease;
   }
-  .segment-card:hover {
-    transform: translateY(-3px);
-    border-color: var(--primary);
+  .segment-card + .segment-card {
+    padding-left: 2.5rem;
+    border-left: 1px solid var(--border);
   }
   .segment-card h3 {
     font-size: 1.75rem;
@@ -440,16 +584,14 @@
     color: var(--text-invert);
     padding: 4rem 3rem;
     border-radius: var(--radius-lg);
-    text-align: center;
+    text-align: left;
   }
   .cta-block h2 {
     color: var(--text-invert);
     max-width: 24ch;
-    margin-inline: auto;
   }
   .cta-block .lede {
     color: rgba(255, 255, 255, 0.7);
-    margin-inline: auto;
     margin-bottom: 2rem;
   }
 
@@ -462,7 +604,11 @@
     .tl-phases, .tl-mark { font-size: 0.6875rem; }
     .tl-phases { letter-spacing: 0.04em; }
     .segments { grid-template-columns: 1fr; }
-    .segment-card { padding: 1.75rem; }
+    .segment-card, .segment-card + .segment-card { padding: 1.75rem 0; border-left: 0; }
+    .segment-card + .segment-card { border-top: 1px solid var(--border); }
+    .stat-row { grid-template-columns: 1fr; gap: 1.25rem; }
+    .stat, .stat:first-child { padding: 0; }
+    .stat + .stat { border-left: 0; border-top: 1px solid var(--border); padding-top: 1.25rem; }
     .cta-block { padding: 3rem 1.5rem; }
   }
 </style>

@@ -44,7 +44,6 @@
     background: var(--bg-grey);
     color: var(--text);
     padding-block: 4rem 2rem;
-    margin-top: 6rem;
     border-top: 1px solid var(--border);
   }
   .footer-inner {

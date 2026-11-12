@@ -41,7 +41,7 @@
 <svelte:window onkeydown={onKeydown} onresize={onResize} />
 
 <header class="nav" bind:clientHeight={navH}>
-  <div class="container container-lg nav-inner">
+  <div class="frame nav-inner">
     <a class="logo" href="/">
       <span class="logo-mark" aria-hidden="true"><img src="/v2-logo-black.png" alt="synia letter logo small"/></span>
       <span class="logo-text">{$t('brand.name')}</span>
@@ -98,10 +98,11 @@
     border-bottom: 1px solid var(--border);
   }
   .nav-inner {
+    padding-inline: var(--global-padding);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-block: 0.6rem;
+    padding-block: 0.75rem;
     gap: 2rem;
   }
   .logo {
@@ -156,9 +157,9 @@
   .nav-cta {
     display: inline-flex;
     align-items: center;
-    padding: 0.4rem 0.85rem;
-    background: var(--bg-invert);
-    color: var(--text-invert);
+    padding: 0.45rem 0.9rem;
+    background: var(--accent);
+    color: var(--primary);
     border-radius: var(--radius-button);
     font-size: var(--fs-small);
     font-weight: var(--fw-medium);
@@ -242,8 +243,8 @@
   .drawer-cta {
     display: block;
     padding: 0.9rem 1rem;
-    background: var(--bg-invert);
-    color: var(--text-invert);
+    background: var(--accent);
+    color: var(--primary);
     border-radius: var(--radius-button);
     font-size: var(--fs-small);
     font-weight: var(--fw-medium);

@@ -24,10 +24,10 @@
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    padding: 0.85rem 1.25rem;
+    padding: 0.8rem 1.1rem;
     border-radius: var(--radius-md);
     font-family: var(--font-body);
-    font-size: var(--body-fs);
+    font-size: var(--fs-small);
     font-weight: var(--fw-medium);
     line-height: 1;
     text-decoration: none;
@@ -43,18 +43,16 @@
   }
 
   .primary {
-    background: var(--bg-invert);
-    color: var(--text-invert);
+    background: var(--accent);
+    color: var(--primary);
   }
+  /* Secondary is a bare text link with an arrow, as in the lab-site pattern. */
   .secondary {
     background: transparent;
     color: var(--text);
-    border-color: var(--border);
+    padding-inline: 0.5rem;
   }
-  .secondary:hover {
-    background: var(--bg-surface);
-    opacity: 1;
-  }
+  .secondary:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
 
   .arrow {
     display: inline-block;
