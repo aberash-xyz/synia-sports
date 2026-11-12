@@ -111,9 +111,9 @@
     gap: 0.25rem;
     font-family: var(--font-heading);
     font-size: 1.2rem;
-    font-weight: var(--fw-medium);
+    font-weight: var(--fw-semibold);
     color: var(--text);
-    letter-spacing: -0.025em;
+    letter-spacing: -0.03em;
     line-height: 1;
   }
   /* Flex box with no font metrics, so the mark centers on the text instead of
