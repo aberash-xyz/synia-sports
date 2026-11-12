@@ -6,7 +6,7 @@
 </script>
 
 <a class="announce" href={$t('announce.href')}>
-  <span class="chip">{$t('announce.chip')}</span>
+  <span class="chip"><i aria-hidden="true"></i>{$t('announce.chip')}</span>
   {$t('announce.text')} <span aria-hidden="true">↗</span>
 </a>
 
@@ -29,21 +29,28 @@
     align-items: center;
     justify-content: center;
     gap: 0.6rem;
-    padding: 0.5rem var(--global-padding);
-    background: var(--accent);
-    color: var(--primary);
+    padding: 0.45rem var(--global-padding);
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
     font-size: var(--fs-small);
-    font-weight: var(--fw-medium);
     text-align: center;
   }
   .announce:hover { text-decoration: underline; text-underline-offset: 3px; }
   .chip {
-    padding: 0.1rem 0.35rem;
-    background: var(--primary);
-    color: var(--text-invert);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
     font-family: var(--font-mono);
     font-size: 0.6875rem;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .chip i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
   }
 </style>

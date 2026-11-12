@@ -13,8 +13,8 @@ export default {
     menu: 'Menu'
   },
   announce: {
-    chip: 'Latest',
-    text: 'What actually fills a stadium: the research on African football attendance',
+    chip: 'Latest research',
+    text: 'What actually fills a stadium',
     href: '/writing/what-actually-fills-a-stadium'
   },
   lang: {
@@ -34,10 +34,11 @@ export default {
     stats: {
       label: 'Ethiopia, the first market we measure',
       items: [
-        { value: '135.5M', label: 'Population', source: 'UNFPA 2025' },
-        { value: '85.4M', label: 'Mobile connections', source: 'DataReportal 2025' },
-        { value: '46.6M', label: 'Mobile data users, one operator', source: 'Ethio Telecom FY2024/25' }
-      ]
+        { value: '135.5M', n: 135.5, label: 'Population', source: 'UNFPA 2025' },
+        { value: '85.4M', n: 85.4, label: 'Mobile connections', source: 'DataReportal 2025' },
+        { value: '46.6M', n: 46.6, label: 'Mobile data users, one operator', source: 'Ethio Telecom FY2024/25' }
+      ],
+      note: 'Bar length is each count as a share of population. Counts are not people: one person can hold several SIMs.'
     },
     feature: {
       chip: 'Free tool',

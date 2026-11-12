@@ -48,13 +48,16 @@
   <div class="container">
     <p class="eyebrow">{$t('home.stats.label')}</p>
     <dl class="stat-row">
-      {#each $t('home.stats.items') as stat}
-        <div class="stat">
-          <dt class="stat-value">{stat.value}</dt>
-          <dd>{stat.label}<span>{stat.source}</span></dd>
+      {#each $t('home.stats.items') as stat, i}
+        <div class="stat" class:scale={i === 0}>
+          <dt>{stat.label}</dt>
+          <dd class="stat-value">{stat.value}</dd>
+          <dd class="stat-bar"><span style="width: {(stat.n / 135.5) * 100}%"></span></dd>
+          <dd class="stat-source">{stat.source}</dd>
         </div>
       {/each}
     </dl>
+    <p class="stat-note">{$t('home.stats.note')}</p>
   </div>
 </section>
 
@@ -180,7 +183,25 @@
 
 <style>
   /* Every section after the hero is separated by a full-frame hairline. */
-  section + section { border-top: 1px solid var(--border); }
+  section + section {
+    position: relative;
+    border-top: 1px solid var(--border);
+  }
+  /* Registration crosses where each rule meets the frame lines. */
+  section + section::before,
+  section + section::after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    top: -5px;
+    left: -6px;
+    width: 11px;
+    height: 11px;
+    background:
+      linear-gradient(var(--text), var(--text)) center / 1px 100% no-repeat,
+      linear-gradient(var(--text), var(--text)) center / 100% 1px no-repeat;
+  }
+  section + section::after { left: auto; right: -6px; }
 
   .hero { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
   .hero-title {
@@ -221,44 +242,50 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-  .stat {
-    display: flex;
-    align-items: center;
-    gap: 0.9rem;
-    padding-inline: 2rem;
-  }
+  /* Instrument readings: label, value, then the value drawn against population. */
+  .stat { padding-inline: 2rem; }
   .stat:first-child { padding-left: 0; }
   .stat + .stat { border-left: 1px solid var(--border); }
+  .stat dt {
+    font-family: var(--font-mono);
+    font-size: var(--fs-tiny);
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+  }
+  .stat dd { margin: 0; }
   .stat-value {
+    margin-top: 0.35rem !important;
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     line-height: 1;
     letter-spacing: -0.05em;
     font-variant-numeric: tabular-nums;
   }
-  .stat:first-child .stat-value { color: var(--accent-deep); }
-  .stat dd {
-    margin: 0;
-    font-size: var(--fs-small);
-    line-height: 1.25;
-    color: var(--text-muted);
+  .stat-bar {
+    margin-top: 1rem !important;
+    height: 6px;
+    border-bottom: 1px solid var(--border);
   }
-  .stat dd span {
-    display: block;
-    margin-top: 0.2rem;
+  .stat-bar span { display: block; height: 100%; background: var(--accent); }
+  .stat.scale .stat-bar span { background: var(--neutral-200); }
+  .stat-source {
+    margin-top: 0.5rem !important;
     font-family: var(--font-mono);
     font-size: 0.6875rem;
+    color: var(--text-muted);
+  }
+  .stat-note {
+    margin-top: 1.5rem;
+    font-size: var(--fs-tiny);
     color: var(--text-muted);
   }
 
   /* Feature: dark panel with the contour texture standing in for photography. */
   .feature {
-    position: relative;
-    overflow: hidden;
     background: var(--bg-invert);
     color: var(--text-invert);
     text-align: center;
   }
-  .feature::before {
+  .feature-inner::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -266,7 +293,7 @@
     filter: invert(1);
     opacity: 0.18;
   }
-  .feature::after {
+  .feature-inner::after {
     content: "";
     position: absolute;
     inset: auto 0 0;
@@ -277,7 +304,8 @@
   }
   .feature-inner {
     position: relative;
-    z-index: 1;
+    overflow: hidden;
+    isolation: isolate;
     padding: clamp(5rem, 12vw, 9rem) var(--global-padding);
     display: flex;
     flex-direction: column;
@@ -296,10 +324,11 @@
     max-width: 36rem;
     margin-bottom: 0.75rem;
   }
+  .feature-inner > * { position: relative; z-index: 1; }
   .chip {
     padding: 0.2rem 0.5rem;
-    background: var(--accent);
-    color: var(--primary);
+    background: var(--secondary);
+    color: var(--text-invert);
     font-family: var(--font-mono);
     font-size: 0.6875rem;
     letter-spacing: 0.1em;
@@ -575,7 +604,7 @@
     top: 0.55rem;
     width: 0.5rem;
     height: 0.5rem;
-    background: var(--accent);
+    background: var(--secondary);
     border-radius: 999px;
   }
 
@@ -607,7 +636,7 @@
     .segment-card, .segment-card + .segment-card { padding: 1.75rem 0; border-left: 0; }
     .segment-card + .segment-card { border-top: 1px solid var(--border); }
     .stat-row { grid-template-columns: 1fr; gap: 1.25rem; }
-    .stat, .stat:first-child { padding: 0; }
+    .stat, .stat:first-child { padding-inline: 0; }
     .stat + .stat { border-left: 0; border-top: 1px solid var(--border); padding-top: 1.25rem; }
     .cta-block { padding: 3rem 1.5rem; }
   }
