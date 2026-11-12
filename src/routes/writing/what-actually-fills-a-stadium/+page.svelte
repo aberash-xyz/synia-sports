@@ -60,22 +60,33 @@
         Ethiopian football contains a contradiction that ought to be impossible to sustain, and
         has been sustained for decades.
       </p>
-      <p>
-        On one side: 135.5 million people, a median age of 19.1 years, and roughly 57.4 million
-        of them under 25, one of the largest youth demographics on earth (UNFPA, 2025). Addis
-        Ababa alone holds about six million people and is growing at over four percent a year
-        (World Population Review, 2026). Add a diaspora of 2.5 to 3 million with genuine
-        emotional attachment to the domestic game. By any structural measure this is a market
-        that should be commercially significant.
-      </p>
-      <p>
-        On the other: clubs spending an estimated 80 to 90 percent of their budgets on player
-        salaries, with effectively nothing left for developing an audience. Roughly 84 percent of
-        Ethiopian sports clubs are government-owned, producing near-total dependency on public
-        subsidy (Ethiopian Business Review, 2023). And in 2025 the league's only international
-        broadcast deal was not renewed, removing international distribution entirely (Pan Africa
-        Football, 2025).
-      </p>
+      <div class="cited">
+        <p>
+          On one side: 135.5 million people, a median age of 19.1 years, and roughly 57.4 million
+          of them under 25, one of the largest youth demographics on earth.<sup>1</sup> Addis
+          Ababa alone holds about six million people and is growing at over four percent a
+          year.<sup>2</sup> Add a diaspora of 2.5 to 3 million with genuine
+          emotional attachment to the domestic game. By any structural measure this is a market
+          that should be commercially significant.
+        </p>
+        <aside class="sidenotes" aria-label="Sources">
+          <p><sup>1</sup> UNFPA, 2025</p>
+          <p><sup>2</sup> World Population Review, 2026</p>
+        </aside>
+      </div>
+      <div class="cited">
+        <p>
+          On the other: clubs spending an estimated 80 to 90 percent of their budgets on player
+          salaries, with effectively nothing left for developing an audience. Roughly 84 percent of
+          Ethiopian sports clubs are government-owned, producing near-total dependency on public
+          subsidy.<sup>3</sup> And in 2025 the league's only international broadcast deal was not
+          renewed, removing international distribution entirely.<sup>4</sup>
+        </p>
+        <aside class="sidenotes" aria-label="Sources">
+          <p><sup>3</sup> Ethiopian Business Review, 2023</p>
+          <p><sup>4</sup> Pan Africa Football, 2025</p>
+        </aside>
+      </div>
       <p>
         The usual explanation for this gap is that the football isn't good enough, or that the
         audience doesn't care enough. The research says both of those are wrong.
@@ -159,12 +170,17 @@
     <div class="container prose">
       <span class="step">Revision one</span>
       <h2>The denominator was wrong</h2>
-      <p>
-        My original research described Ethiopia as a low-data, largely offline market, and cited
-        the standard figures to support it: internet penetration around 21.3 percent, smartphone
-        penetration around 15 percent (DataReportal, 2025). Nearly every outside analysis of the
-        Ethiopian market uses those numbers or ones like them.
-      </p>
+      <div class="cited">
+        <p>
+          My original research described Ethiopia as a low-data, largely offline market, and cited
+          the standard figures to support it: internet penetration around 21.3 percent, smartphone
+          penetration around 15 percent.<sup>5</sup> Nearly every outside analysis of the
+          Ethiopian market uses those numbers or ones like them.
+        </p>
+        <aside class="sidenotes" aria-label="Sources">
+          <p><sup>5</sup> DataReportal, 2025</p>
+        </aside>
+      </div>
       <p>
         The same source reports something else: <strong>85.4 million mobile connections, or 63.8
         percent of the population.</strong> I quoted that figure too, and did not sit with the
@@ -463,6 +479,44 @@
   .prose em { font-style: italic; }
   .prose strong { font-weight: var(--fw-semibold); color: var(--text); }
   .prose a { text-decoration: underline; text-underline-offset: 0.2em; }
+
+  /* Citations: margin notes beside their paragraph on wide screens, dropped
+     under it on narrow ones (same breakpoint as the home Fig. 1 notes). */
+  .prose sup {
+    font-family: var(--font-mono);
+    font-size: 0.7em;
+    color: var(--text-muted);
+    margin-left: 0.1em;
+  }
+  .prose > .cited {
+    max-width: none;
+    margin-block: 1.25rem;
+    display: grid;
+    grid-template-columns: minmax(0, 44rem) 14rem;
+    column-gap: 3rem;
+    align-items: start;
+  }
+  .cited > p { margin: 0; }
+  .sidenotes {
+    padding-top: 0.35rem;
+    display: grid;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 1.45;
+    color: var(--text-muted);
+  }
+  .prose .sidenotes p { margin: 0; color: inherit; line-height: inherit; padding-left: 1.2em; text-indent: -1.2em; }
+  .sidenotes sup { margin: 0 0.25rem 0 0; font-size: 0.85em; }
+  @media (max-width: 1099px) {
+    .prose > .cited { display: block; }
+    .sidenotes {
+      margin-top: 0.75rem;
+      padding: 0 0 0 0.75rem;
+      border-left: 2px solid var(--border);
+      gap: 0.2rem;
+    }
+  }
 
   .step {
     display: inline-block;

@@ -75,6 +75,11 @@
     color: var(--text-muted);
   }
   .back:hover { color: var(--text); }
+  .back + :global(.eyebrow)::before {
+    content: "/";
+    margin-inline: 0.6rem;
+    color: var(--border);
+  }
 
   h1 {
     margin-top: 0.5rem;

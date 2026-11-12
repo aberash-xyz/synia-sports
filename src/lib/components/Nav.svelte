@@ -111,9 +111,9 @@
     gap: 0.25rem;
     font-family: var(--font-heading);
     font-size: 1.2rem;
-    font-weight: var(--fw-medium);
+    font-weight: var(--fw-bold);
     color: var(--text);
-    letter-spacing: -0.01em;
+    letter-spacing: -0.035em;
   }
   .logo-mark {
     color: var(--accent);

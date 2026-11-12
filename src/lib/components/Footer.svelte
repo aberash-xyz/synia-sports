@@ -57,7 +57,8 @@
     gap: 0.5rem;
     font-family: var(--font-heading);
     font-size: 1.5rem;
-    font-weight: var(--fw-medium);
+    font-weight: var(--fw-bold);
+    letter-spacing: -0.035em;
   }
   .brand .logo-mark { color: var(--accent); }
   .tagline {
