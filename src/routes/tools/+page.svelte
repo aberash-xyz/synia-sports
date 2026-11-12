@@ -39,7 +39,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section list-section">
   <div class="container">
     <ul class="tools">
       {#each tools as tool}
@@ -65,6 +65,8 @@
 </section>
 
 <style>
+  /* Header already carries the large bottom padding; don't double it. */
+  .list-section { padding-top: 0; }
   h1 {
     margin-top: 0.5rem;
     font-size: clamp(2.5rem, 6vw, 4rem);

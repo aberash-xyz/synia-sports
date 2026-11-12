@@ -35,8 +35,8 @@
 
 <article>
   <!-- HEADER -->
-  <section class="section section-lg">
-    <div class="container container-sm">
+  <section class="section section-lg article-head">
+    <div class="container">
       <a class="back" href="/writing">← {$t('nav.writing')}</a>
       <span class="eyebrow">Research</span>
       <h1>What actually fills a stadium</h1>
@@ -55,7 +55,7 @@
 
   <!-- THE PARADOX -->
   <section class="section">
-    <div class="container container-sm prose">
+    <div class="container prose">
       <p class="lede">
         Ethiopian football contains a contradiction that ought to be impossible to sustain, and
         has been sustained for decades.
@@ -85,7 +85,7 @@
 
   <!-- THE CYCLE -->
   <section class="section section-grey">
-    <div class="container container-sm prose">
+    <div class="container prose">
       <h2>A cycle, not a deficiency</h2>
       <p>
         What the numbers above actually describe is a loop that feeds itself. Low attendance
@@ -110,7 +110,7 @@
 
   <!-- THE RESEARCH -->
   <section class="section">
-    <div class="container container-sm prose">
+    <div class="container prose">
       <h2>What the research actually found</h2>
       <p>
         Four peer-reviewed sources anchored the original research. Taken together they redraw the
@@ -156,7 +156,7 @@
 
   <!-- CORRECTION 1 -->
   <section class="section section-grey">
-    <div class="container container-sm prose">
+    <div class="container prose">
       <span class="step">Revision one</span>
       <h2>The denominator was wrong</h2>
       <p>
@@ -215,7 +215,7 @@
 
   <!-- CORRECTION 2 -->
   <section class="section">
-    <div class="container container-sm prose">
+    <div class="container prose">
       <span class="step">Revision two</span>
       <h2>Which kills the hardware I proposed</h2>
       <p>
@@ -278,7 +278,7 @@
 
   <!-- WHAT INTERVENTION LOOKS LIKE -->
   <section class="section section-grey">
-    <div class="container container-sm prose">
+    <div class="container prose">
       <h2>What breaking the loop looks like</h2>
       <p>
         Take the Richau finding seriously and the intervention list stops being about the football
@@ -315,7 +315,7 @@
 
   <!-- FRAMEWORK -->
   <section class="section">
-    <div class="container container-sm prose">
+    <div class="container prose">
       <h2>Where domestic football sits</h2>
       <p>
         Scored against the <a href="/writing/sports-asset-activation-framework">Sports Asset
@@ -370,7 +370,7 @@
 
   <!-- CLOSE -->
   <section class="section section-grey">
-    <div class="container container-sm prose">
+    <div class="container prose">
       <h2>The gap is not inevitable</h2>
       <p>
         The distance between a league's cultural weight and its commercial reality is not a fact
@@ -403,6 +403,8 @@
 </article>
 
 <style>
+  /* The first body section brings its own top padding. */
+  .article-head { padding-bottom: 0; }
   .back {
     display: inline-block;
     margin-bottom: 2rem;
@@ -435,7 +437,8 @@
   }
   .byline em { font-style: italic; }
 
-  .prose { max-width: 44rem; }
+  /* Column stays at reading width but sits on the frame gutter, not centered. */
+  .prose > * { max-width: 44rem; }
   .prose p {
     margin-block: 1.25rem;
     line-height: 1.7;

@@ -61,8 +61,8 @@
 
 <article>
   <!-- HEADER -->
-  <section class="section section-lg">
-    <div class="container container-sm">
+  <section class="section section-lg article-head">
+    <div class="container">
       <a class="back" href="/writing">← {$t('nav.writing')}</a>
       <span class="eyebrow">Framework</span>
       <h1>The Sports Asset Activation Framework</h1>
@@ -76,7 +76,7 @@
 
   <!-- PROBLEM -->
   <section class="section">
-    <div class="container container-sm prose">
+    <div class="container prose">
       <p class="lede">
         Most destinations do not have a sports tourism problem. They have a sequencing problem.
       </p>
@@ -98,7 +98,7 @@
 
   <!-- STEP 1 -->
   <section class="section section-grey">
-    <div class="container container-sm prose">
+    <div class="container prose">
       <span class="step">Step 1</span>
       <h2>Score every asset on four things</h2>
       <p>
@@ -146,7 +146,7 @@
 
   <!-- STEP 2 -->
   <section class="section">
-    <div class="container container-sm prose">
+    <div class="container prose">
       <span class="step">Step 2</span>
       <h2>Plot gap against clock</h2>
       <p>
@@ -194,7 +194,7 @@
 
   <!-- STEP 3 -->
   <section class="section section-grey">
-    <div class="container container-sm prose">
+    <div class="container prose">
       <span class="step">Step 3</span>
       <h2>One metric, one owner, one collection method</h2>
       <p>
@@ -226,7 +226,7 @@
 
   <!-- STEP 4 -->
   <section class="section">
-    <div class="container container-sm prose">
+    <div class="container prose">
       <span class="step">Step 4</span>
       <h2>Apply the three multipliers</h2>
       <p>
@@ -248,7 +248,7 @@
 
   <!-- WORKED EXAMPLE -->
   <section class="section section-grey">
-    <div class="container container-sm prose">
+    <div class="container prose">
       <span class="step">Worked example</span>
       <h2>Altitude running</h2>
 
@@ -304,7 +304,7 @@
 
   <!-- THE BUILD -->
   <section class="section">
-    <div class="container container-sm prose">
+    <div class="container prose">
       <span class="step">The 30-minute build</span>
       <h2>Running it with a team</h2>
       <ol class="build">
@@ -328,7 +328,7 @@
 
   <!-- HONEST NOTE -->
   <section class="section">
-    <div class="container container-sm prose">
+    <div class="container prose">
       <h2>An honest note on football</h2>
       <p>
         In most emerging markets the
@@ -348,7 +348,7 @@
 
   <!-- COMPARABLES -->
   <section class="section section-grey">
-    <div class="container container-sm prose">
+    <div class="container prose">
       <h2>Where this comes from</h2>
       <p>
         The framework is assembled from what has worked elsewhere, and from what those cases
@@ -381,6 +381,8 @@
 </article>
 
 <style>
+  /* The first body section brings its own top padding. */
+  .article-head { padding-bottom: 0; }
   .back {
     display: inline-block;
     margin-bottom: 2rem;
@@ -411,7 +413,8 @@
     max-width: 44rem;
   }
 
-  .prose { max-width: 44rem; }
+  /* Column stays at reading width but sits on the frame gutter, not centered. */
+  .prose > * { max-width: 44rem; }
   .prose p {
     margin-block: 1.25rem;
     line-height: 1.7;
