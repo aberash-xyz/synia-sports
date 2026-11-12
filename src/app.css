@@ -90,10 +90,6 @@
   --accent-soft: #fff2e8;   /* tinted surfaces — Activate quadrant, active states */
   --accent-deep: #a8460a;   /* accent as readable text on light backgrounds */
   --accent-ring: rgba(253, 136, 46, 0.35);
-  /* Secondary = ink blue, near-complement of the logo orange. Interface (buttons,
-     active states). Orange is reserved for measured things: bars, figures, notes. */
-  --secondary: #1d4e9e;
-  --secondary-hover: #173f80;
   --grey-section: #f1f1f1;
   --grey-text: #606060;
   --text-medium: #313131;
@@ -182,23 +178,6 @@ html[lang="am"] h3 {
   margin-inline: auto;
   border-inline: 1px solid var(--border);
 }
-/* Survey ruler: tick marks inside each frame line, minor every 8px, major every 40px. */
-main.frame { position: relative; }
-main.frame::before,
-main.frame::after {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 9px;
-  pointer-events: none;
-  background:
-    repeating-linear-gradient(to bottom, var(--neutral-300) 0 1px, transparent 1px 40px) left / 9px 100% no-repeat,
-    repeating-linear-gradient(to bottom, var(--neutral-200) 0 1px, transparent 1px 8px) left / 4px 100% no-repeat;
-}
-main.frame::after { left: auto; right: 0; transform: scaleX(-1); }
 
 .section { padding-block: var(--section-padding); }
 .section-lg { padding-block: var(--section-padding-lg); }

@@ -183,25 +183,7 @@
 
 <style>
   /* Every section after the hero is separated by a full-frame hairline. */
-  section + section {
-    position: relative;
-    border-top: 1px solid var(--border);
-  }
-  /* Registration crosses where each rule meets the frame lines. */
-  section + section::before,
-  section + section::after {
-    content: "";
-    position: absolute;
-    z-index: 3;
-    top: -5px;
-    left: -6px;
-    width: 11px;
-    height: 11px;
-    background:
-      linear-gradient(var(--text), var(--text)) center / 1px 100% no-repeat,
-      linear-gradient(var(--text), var(--text)) center / 100% 1px no-repeat;
-  }
-  section + section::after { left: auto; right: -6px; }
+  section + section { border-top: 1px solid var(--border); }
 
   .hero { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
   .hero-title {
@@ -325,9 +307,15 @@
     margin-bottom: 0.75rem;
   }
   .feature-inner > * { position: relative; z-index: 1; }
+  /* On dark panels the black button inverts to white. */
+  .feature :global(.btn.primary),
+  .cta-block :global(.btn.primary) {
+    background: var(--bg-default);
+    color: var(--text);
+  }
   .chip {
     padding: 0.2rem 0.5rem;
-    background: var(--secondary);
+    border: 1px solid rgba(255, 255, 255, 0.45);
     color: var(--text-invert);
     font-family: var(--font-mono);
     font-size: 0.6875rem;
@@ -604,7 +592,7 @@
     top: 0.55rem;
     width: 0.5rem;
     height: 0.5rem;
-    background: var(--secondary);
+    background: var(--text);
     border-radius: 999px;
   }
 

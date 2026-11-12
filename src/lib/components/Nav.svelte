@@ -147,7 +147,7 @@
     right: 0;
     bottom: -0.3rem;
     height: 2px;
-    background: var(--secondary);
+    background: var(--text);
   }
   .actions {
     display: flex;
@@ -158,7 +158,7 @@
     display: inline-flex;
     align-items: center;
     padding: 0.45rem 0.9rem;
-    background: var(--secondary);
+    background: var(--bg-invert);
     color: var(--text-invert);
     border-radius: var(--radius-button);
     font-size: var(--fs-small);
@@ -243,7 +243,7 @@
   .drawer-cta {
     display: block;
     padding: 0.9rem 1rem;
-    background: var(--secondary);
+    background: var(--bg-invert);
     color: var(--text-invert);
     border-radius: var(--radius-button);
     font-size: var(--fs-small);

@@ -30,9 +30,8 @@
     justify-content: center;
     gap: 0.6rem;
     padding: 0.45rem var(--global-padding);
-    background: var(--bg-surface);
-    border-bottom: 1px solid var(--border);
-    color: var(--text);
+    background: var(--bg-invert);
+    color: var(--text-invert);
     font-size: var(--fs-small);
     text-align: center;
   }
@@ -45,7 +44,7 @@
     font-size: 0.6875rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.6);
   }
   .chip i {
     width: 7px;

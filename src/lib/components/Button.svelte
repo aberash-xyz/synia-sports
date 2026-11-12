@@ -38,15 +38,14 @@
   .btn:hover { opacity: 0.85; }
   .btn:active { transform: translateY(1px); }
   .btn:focus-visible {
-    outline: 2px solid var(--secondary);
+    outline: 2px solid var(--text);
     outline-offset: 3px;
   }
 
   .primary {
-    background: var(--secondary);
+    background: var(--bg-invert);
     color: var(--text-invert);
   }
-  .primary:hover { background: var(--secondary-hover); opacity: 1; }
   /* Secondary is a bare text link with an arrow, as in the lab-site pattern. */
   .secondary {
     background: transparent;
