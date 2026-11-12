@@ -6,7 +6,7 @@
 </script>
 
 <a class="announce" href={$t('announce.href')}>
-  <span class="chip"><i aria-hidden="true"></i>{$t('announce.chip')}</span>
+  <span class="chip">{$t('announce.chip')}</span>
   {$t('announce.text')} <span aria-hidden="true">↗</span>
 </a>
 
@@ -45,11 +45,5 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.6);
-  }
-  .chip i {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--accent);
   }
 </style>

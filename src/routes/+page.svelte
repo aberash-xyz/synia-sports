@@ -201,7 +201,7 @@
     line-height: 1.6;
   }
   .rotator {
-    color: var(--accent-deep);
+    color: var(--accent);
     white-space: nowrap;
     border-right: 0.06em solid currentColor;
     padding-right: 0.04em;
