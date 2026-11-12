@@ -34,7 +34,7 @@
 </svelte:head>
 
 <section class="section section-lg">
-  <div class="container container-sm">
+  <div class="container">
     <span class="eyebrow">{$t('nav.writing')}</span>
     <h1>Methods, published.</h1>
     <p class="lede">
@@ -45,7 +45,7 @@
 </section>
 
 <section class="section">
-  <div class="container container-sm">
+  <div class="container">
     <ul class="pieces">
       {#each pieces as piece}
         <li>
@@ -80,6 +80,7 @@
   }
 
   .pieces {
+    max-width: var(--container-sm);
     list-style: none;
     margin: 0;
     padding: 0;

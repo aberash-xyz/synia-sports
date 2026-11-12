@@ -29,7 +29,7 @@
 </svelte:head>
 
 <section class="section section-lg">
-  <div class="container container-sm">
+  <div class="container">
     <span class="eyebrow">{$t('nav.tools')}</span>
     <h1>Methods you can run.</h1>
     <p class="lede">
@@ -40,7 +40,7 @@
 </section>
 
 <section class="section">
-  <div class="container container-sm">
+  <div class="container">
     <ul class="tools">
       {#each tools as tool}
         <li>
@@ -80,6 +80,7 @@
   }
 
   .tools {
+    max-width: var(--container-sm);
     list-style: none;
     margin: 0;
     padding: 0;
