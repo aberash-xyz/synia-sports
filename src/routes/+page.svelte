@@ -4,6 +4,9 @@
 
   // Typewriter: hold word, delete, type next. SSR and reduced-motion show first word static.
   let typed = $state($t('home.titleWords')[0]);
+  // Invisible copy of the longest word holds the slot open, so the line breaks
+  // in the same place whatever is typed (no reflow mid-word on mobile).
+  const longest = $derived($t('home.titleWords').reduce((a, b) => (b.length > a.length ? b : a)));
   $effect(() => {
     const words = $t('home.titleWords');
     if ($locale !== 'en' || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -30,7 +33,7 @@
   <div class="container">
     {#if $locale === 'en'}
       <h1 class="hero-title" aria-label={$t('home.title')}>
-        <span aria-hidden="true">{$t('home.titleLead')} <span class="rotator">{typed}</span><br />{$t('home.titleTail')}</span>
+        <span aria-hidden="true">{$t('home.titleLead')} <span class="rotator"><span class="sizer">{longest}</span><span class="typed">{typed}</span></span><br />{$t('home.titleTail')}</span>
       </h1>
     {:else}
       <h1 class="hero-title">{$t('home.title')}</h1>
@@ -201,14 +204,22 @@
     line-height: 1.6;
   }
   .rotator {
+    display: inline-grid;
     color: var(--accent);
     white-space: nowrap;
+  }
+  .rotator > * { grid-area: 1 / 1; }
+  .sizer { visibility: hidden; }
+  /* Zero-width char keeps the line box (and caret) when nothing is typed. */
+  .typed::before { content: "\200b"; }
+  .typed {
+    justify-self: start;
     border-right: 0.06em solid currentColor;
     padding-right: 0.04em;
     animation: caret 1s steps(1) infinite;
   }
   @keyframes caret { 50% { border-color: transparent; } }
-  @media (prefers-reduced-motion: reduce) { .rotator { animation: none; border-right: 0; } }
+  @media (prefers-reduced-motion: reduce) { .typed { animation: none; border-right: 0; } }
   .hero .lede { max-width: 44rem; }
   .cta-row {
     margin-top: 2.25rem;
