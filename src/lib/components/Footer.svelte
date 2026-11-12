@@ -59,6 +59,7 @@
     font-size: 1.5rem;
     font-weight: var(--fw-bold);
     letter-spacing: -0.035em;
+    line-height: 1;
   }
   .brand .logo-mark { color: var(--accent); }
   .tagline {
@@ -69,6 +70,7 @@
   }
   
   .logo-mark {
+    display: block;
     height: 40px;
     width: 40px;
   }

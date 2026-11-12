@@ -114,14 +114,13 @@
     font-weight: var(--fw-bold);
     color: var(--text);
     letter-spacing: -0.035em;
+    line-height: 1;
   }
-  .logo-mark {
-    color: var(--accent);
-    font-size: 1.4rem;
-    transform: translateY(2px);
-    max-height: 34px;
-  }
+  /* Flex box with no font metrics, so the mark centers on the text instead of
+     riding a 1.4rem line box. */
+  .logo-mark { display: flex; }
   .logo-mark>img {
+    display: block;
     height: 34px;
     width: 34px;
   }
