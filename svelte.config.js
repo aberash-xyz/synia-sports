@@ -11,6 +11,12 @@ export default {
       precompress: false,
       strict: true
     }),
-    prerender: { entries: ['*'] }
+    prerender: {
+      entries: ['*'],
+      // /weekly/[week] has no pages until the synia-data bot pushes the first week; any other unseen route still fails.
+      handleUnseenRoutes: ({ routes, message }) => {
+        if (routes.some((r) => r !== '/weekly/[week]')) throw new Error(message);
+      }
+    }
   }
 };
