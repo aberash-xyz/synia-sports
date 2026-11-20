@@ -16,7 +16,7 @@
 <article>
   <section class="section section-lg head">
     <div class="container">
-      <a class="back" href="/weekly">← Visibility Index</a>
+      <a class="back" href="/visibility">← Visibility Index</a>
       <span class="eyebrow">Week of {w.label}</span>
       <h1>Telegram Visibility Index</h1>
       {#if w.commentary}<p class="lede">{w.commentary}</p>{/if}

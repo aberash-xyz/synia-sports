@@ -27,7 +27,7 @@
       <ul>
         {#each weeks as w}
           <li>
-            <a href="/weekly/{w.week}">
+            <a href="/visibility/{w.week}">
               <span class="label">Week of {w.label}</span>
               {#if w.rows[0]}<span class="top">#1 {w.rows[0].name} · {w.rows[0].share.toFixed(1)}%</span>{/if}
             </a>

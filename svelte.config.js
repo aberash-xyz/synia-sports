@@ -13,9 +13,9 @@ export default {
     }),
     prerender: {
       entries: ['*'],
-      // /weekly/[week] has no pages until the synia-data bot pushes the first week; any other unseen route still fails.
+      // /visibility/[week] has no pages until the synia-data bot pushes the first week; any other unseen route still fails.
       handleUnseenRoutes: ({ routes, message }) => {
-        if (routes.some((r) => r !== '/weekly/[week]')) throw new Error(message);
+        if (routes.some((r) => r !== '/visibility/[week]')) throw new Error(message);
       }
     }
   }
