@@ -51,6 +51,7 @@
       <a href="/" class:active={isActive('/')}>{$t('nav.home')}</a>
       <a href="/about" class:active={isActive('/about')}>{$t('nav.about')}</a>
       <a href="/writing" class:active={isActive('/writing')}>{$t('nav.writing')}</a>
+      <a href="/visibility" class:active={isActive('/visibility')}>{$t('nav.visibility')}</a>
       <a href="/tools" class:active={isActive('/tools')}>{$t('nav.tools')}</a>
     </nav>
 
@@ -83,6 +84,7 @@
     <a href="/" class:active={isActive('/')}>{$t('nav.home')}</a>
     <a href="/about" class:active={isActive('/about')}>{$t('nav.about')}</a>
     <a href="/writing" class:active={isActive('/writing')}>{$t('nav.writing')}</a>
+    <a href="/visibility" class:active={isActive('/visibility')}>{$t('nav.visibility')}</a>
     <a href="/tools" class:active={isActive('/tools')}>{$t('nav.tools')}</a>
   </nav>
   <a class="drawer-cta" href="/about#contact">{$t('nav.cta')}</a>
