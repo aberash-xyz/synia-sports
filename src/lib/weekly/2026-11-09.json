@@ -1,0 +1,158 @@
+{
+  "week": "2026-11-09",
+  "label": "9 Nov – 15 Nov 2026",
+  "method": "v1",
+  "season": "2019EC",
+  "commentary": "A quiet week: total views fell to 242,060 from 504,720, across 23 posts naming a club. Ethiopia Nigd Bank stayed first with a 30.3% share, though none of the most-viewed posts named it. Mechal climbed from seventh to second on 39,460 views, up from 16,560, helped by post-match coverage, a 0-0 Coca-Cola Cup draw with Saint George and news on Abdulkerim Worku and Alemberhan Yigzaw.",
+  "rows": [
+    {
+      "rank": 1,
+      "name": "Ethiopia Nigd Bank",
+      "share": 30.3,
+      "views": 73460,
+      "posts": 10,
+      "delta": "="
+    },
+    {
+      "rank": 2,
+      "name": "Mechal",
+      "share": 16.3,
+      "views": 39460,
+      "posts": 5,
+      "delta": "▲5"
+    },
+    {
+      "rank": 3,
+      "name": "Ethiopian Medhin",
+      "share": 6.8,
+      "views": 16420,
+      "posts": 2,
+      "delta": "▼1"
+    },
+    {
+      "rank": 4,
+      "name": "Ethiopia Electricity",
+      "share": 6.6,
+      "views": 16040,
+      "posts": 2,
+      "delta": "▲5"
+    },
+    {
+      "rank": 5,
+      "name": "Saint George",
+      "share": 6.5,
+      "views": 15780,
+      "posts": 2,
+      "delta": "▼1"
+    },
+    {
+      "rank": 6,
+      "name": "Bunna",
+      "share": 6.5,
+      "views": 15710,
+      "posts": 2,
+      "delta": "▼3"
+    },
+    {
+      "rank": 7,
+      "name": "Hadiya Hossana",
+      "share": 6.3,
+      "views": 15330,
+      "posts": 2,
+      "delta": "▲1"
+    },
+    {
+      "rank": 8,
+      "name": "Sheger Ketema",
+      "share": 5.9,
+      "views": 14330,
+      "posts": 2,
+      "delta": "▲2"
+    },
+    {
+      "rank": 9,
+      "name": "Gamo Chencha",
+      "share": 5.6,
+      "views": 13550,
+      "posts": 2,
+      "delta": "▲3"
+    },
+    {
+      "rank": 10,
+      "name": "Wolaita Dicha",
+      "share": 3.3,
+      "views": 7870,
+      "posts": 1,
+      "delta": "▼5"
+    },
+    {
+      "rank": 11,
+      "name": "Adama City",
+      "share": 3.2,
+      "views": 7810,
+      "posts": 1,
+      "delta": "▲5"
+    },
+    {
+      "rank": 12,
+      "name": "Bahir Dar Kenema",
+      "share": 2.6,
+      "views": 6300,
+      "posts": 1,
+      "delta": "▲2"
+    },
+    {
+      "rank": 13,
+      "name": "Fasil Kenema",
+      "share": 0,
+      "views": 0,
+      "posts": 0,
+      "delta": "▲2"
+    },
+    {
+      "rank": 14,
+      "name": "Halaba Ketema",
+      "share": 0,
+      "views": 0,
+      "posts": 0,
+      "delta": "▼3"
+    },
+    {
+      "rank": 15,
+      "name": "Hawassa City",
+      "share": 0,
+      "views": 0,
+      "posts": 0,
+      "delta": "▼2"
+    },
+    {
+      "rank": 16,
+      "name": "Negelle Arsi",
+      "share": 0,
+      "views": 0,
+      "posts": 0,
+      "delta": "▼10"
+    },
+    {
+      "rank": 17,
+      "name": "Sidama Bunna",
+      "share": 0,
+      "views": 0,
+      "posts": 0,
+      "delta": "▲1"
+    },
+    {
+      "rank": 18,
+      "name": "Welwalu Adigrat",
+      "share": 0,
+      "views": 0,
+      "posts": 0,
+      "delta": "▼1"
+    }
+  ],
+  "notes": [
+    "Source: 147 posts from Soccer Ethiopia, Ethiopian Football Federation, Ethiopian Premier League; 23 named a club, 242,060 club-attributed views.",
+    "Club-owned channel excluded: Saint George SC (97 posts, 262,770 views).",
+    "Method v1: share of views on posts naming each club, measured 48h after posting."
+  ]
+}
