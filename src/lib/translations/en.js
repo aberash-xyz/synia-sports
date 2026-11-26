@@ -28,12 +28,12 @@ export default {
     titleLead: 'Developing',
     titleWords: ['emerging', 'unmeasured', 'East African', 'overlooked'],
     titleTail: 'sports markets',
-    lede: 'Where the data doesn’t exist, we build it. Then we make it mean something. Audience size, sponsorship value, what an event is worth to a city.',
+    lede: 'Building data layers, tools and strategies that enable sustainable market development. Measuring first in Ethiopia and building outwards.',
     ctaPrimary: 'What we do',
     ctaSecondary: 'Get in touch',
     // Every stat carries its source; no figures about Synia itself.
     stats: {
-      label: 'Ethiopia, the first market we measure',
+      label: 'Is Ethiopia really low-data?',
       items: [
         { value: '135.5M', n: 135.5, label: 'Population', source: 'UNFPA 2025' },
         { value: '85.4M', n: 85.4, label: 'Mobile connections', source: 'DataReportal 2025' },
@@ -44,7 +44,7 @@ export default {
     feature: {
       chip: 'Free tool',
       title: 'Score a portfolio of sports assets',
-      body: 'The Sports Asset Activation Framework, as a working tool. Free to use, nothing uploaded.',
+      body: 'The Sports Asset Activation Framework, as a working tool. Free to use.',
       cta: 'Open the scorecard',
       href: '/tools/asset-scorecard'
     },
@@ -54,7 +54,7 @@ export default {
     },
     figure: {
       kicker: 'Fig. 1',
-      title: 'The figure most analyses use says 21% of the country is online. The phone network counts far more.',
+      title: 'Most reports say 21% of the country is online, but phone networks count far more.',
       unit: 'Millions. Bar length is share of a 135.5M population.',
       rows: [
         { label: 'Internet users, national estimate', source: 'DataReportal 2025', value: 28.9, muted: true, note: 'the number everyone quotes' },
@@ -111,9 +111,9 @@ export default {
   about: {
     eyebrow: 'About Synia',
     title: 'Built from the market outward.',
-    intro: 'Synia Sports is a sports measurement company, working first in Ethiopia. The global sports business measures every market with the same instruments, and those instruments were built somewhere else. Where they do not fit, the market gets called low-data. The truer reading is that the measurement has not been built yet. We build it, and turn it into decisions clubs, cities and brands can act on.',
+    intro: 'Synia Sports is a sports measurement company, working first in Ethiopia. The global sports business measures most markets with the same instruments, and those instruments don’t fit everywhere. Where they don’t fit is where we work. We build the measurement and data tools those markets need, so clubs, cities and brands can make decisions on evidence.',
     methodologyTitle: 'Our approach',
-    methodologyBody: 'One principle runs under all of it: measure with what the market already has, and instrument only the gap. Before designing a new collection instrument we look for the number someone already holds: the camp operator who knows their bed-nights, the club that knows its gate, the federation that knows its participation. Where that number genuinely does not exist, we go and count, in venues, at events, in communities. Where counting by hand is not enough, we build the instrument that does it. That work is in progress and we will describe it when it is finished. Every measure we design gets one owner and one collection method that can run this quarter. If it cannot be collected now, it is not a measure. It is a wish. We taught this method in September 2026 in a sports tourism masterclass for the Addis Ababa Tourism Commission: turning fans into visitors, building the sports tourism economy.',
+    methodologyBody: 'One principle runs under all of it: measure with what the market already has, and instrument only the gap. Before designing a new collection instrument, we look for the number someone already holds: the camp operator who knows their bed-nights, the club that knows its gate, the federation that knows its participation. Where that number does not exist, we build the tools to collect it. Every measure we design has an owner and leads to an action. A number that cannot be collected now cannot guide a decision now, so we start collecting early. We taught this method in September 2026 in a sports tourism masterclass for the Addis Ababa Tourism Commission: turning fans into visitors, building the sports tourism economy.',
     offeringsEyebrow: 'Capabilities',
     offeringsTitle: 'What we do.',
     offeringsLede: 'Three capabilities, all built on the same measurement layer.',
